@@ -1,7 +1,11 @@
 <html>
         <head></head>
         <body>
-                
+                <?php
+                        $myfile = fopen("src/messageHandler/messages.txt", "r") or die("Unable to open file!");
+                        echo fread($myfile,filesize("webdictionary.txt"));
+                        fclose($myfile);
+                ?>  
                 <form method="POST" action="src/messageHandler/submit.php">
                         <input name="name" placeholder="Anon" type="text">
                         <input name="message" placeholder="Isn't avian so pog?!" type="text">
