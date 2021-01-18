@@ -1,9 +1,12 @@
-<?php 
-  $savemsg = fopen("msghistory.txt", "a")
-  function writeMessage() {
-    fwrite($savemsg, $submit);
-    fclose($savemsg);
-  }
-?>
-<input type="text" id="lname" name="lname" value="<?php echo htmlspecialchars($submit); ?>"><br><br>
-<button onclick="writeMessage()">Click me</button> 
+<html>
+        <head></head>
+        <body>
+                
+                <form method="POST" action="src/messageHandler/submit.php">
+                        <input name="name" placeholder="Anon" type="text">
+                        <input name="message" placeholder="Isn't avian so pog?!" type="text">
+                        <input type="submit" value="submit">
+                </form>
+        </body>
+</html>
+
