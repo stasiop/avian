@@ -1,9 +1,9 @@
 <?php 
   $savemsg = fopen("msghistory.txt", "a")
+  function writeMessage() {
+    fwrite($savemsg, $submit);
+    fclose($savemsg);
+  }
 ?>
 <input type="text" id="lname" name="lname" value="<?php echo htmlspecialchars($submit); ?>"><br><br>
-<input type="submit" value="Submit">
-<?php 
-  fwrite($savemsg, $submit);
-  fclose($savemsg);
-?>
+<button onclick="writeMessage()">Click me</button> 
