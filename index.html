@@ -1,21 +1,5 @@
 <html>
         <head></head>
-                <?php
-                function drawTable($rows, $cols){
-                        echo "<table border='1'>"; 
-
-                        for($tr=1;$tr<=$rows;$tr++){ 
-
-                            echo "<tr>"; 
-                                for($td=1;$td<=$cols;$td++){ 
-                                       echo "<td align='center'>".$tr*$td."</td>"; 
-                                } 
-                            echo "</tr>"; 
-                        } 
-
-                        echo "</table>";
-                }
-                ?>  
         <body>
                 <form method="POST" action="src/messageHandler/submit.php">
                         <input name="name" placeholder="Anon" type="text">
