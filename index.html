@@ -1,9 +1,20 @@
 <html>
         <head></head>
                 <?php
-                        $myfile = fopen("src/messageHandler/messages.txt", "r") or die("Unable to open file!");
-                        echo fread($myfile,filesize("webdictionary.txt"));
-                        fclose($myfile);
+                function drawTable($rows, $cols){
+                        echo "<table border='1'>"; 
+
+                        for($tr=1;$tr<=$rows;$tr++){ 
+
+                            echo "<tr>"; 
+                                for($td=1;$td<=$cols;$td++){ 
+                                       echo "<td align='center'>".$tr*$td."</td>"; 
+                                } 
+                            echo "</tr>"; 
+                        } 
+
+                        echo "</table>";
+                }
                 ?>  
         <body>
                 <form method="POST" action="src/messageHandler/submit.php">
