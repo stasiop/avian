@@ -1,5 +1,14 @@
 <html>
         <head></head>
+        <?php 
+                funtion onLoadIn(){
+                        $msgHistoryPath="src/messageHandler/message.txt";
+                        $msgHistory=fopen("src/messageHandler/message.txt","r");
+                        $content=fread($msgHistory);
+                        echo $content;
+                }
+                
+        ?>
         <body>
                 <form method="POST" action="src/messageHandler/submit.php">
                         <input name="name" placeholder="Anon" type="text">
@@ -7,5 +16,6 @@
                         <input type="submit" value="submit">
                 </form>
         </body>
+        
 </html>
 
