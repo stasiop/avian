@@ -1,6 +1,6 @@
 <?php
     extract($_REQUEST);
-    $file=fopen("db.txt","a+");
+    $file=fopen("UP.txt","a+");
 
     fwrite($file,"name :");
     fwrite($file, $username ."\n");
