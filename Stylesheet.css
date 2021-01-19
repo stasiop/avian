@@ -1,4 +1,7 @@
-.object{
+.textContainer{
   position:absolute;
-  bottom:0;
+}
+.object{
+  position: relative;
+  bottom:10x;
 }
