@@ -10,9 +10,11 @@
                 onLoadIn();
         ?>
         <body>
-                <object data="src/messageHandler/message.txt" width="300" height="200">
-                Not supported
-                </object>
+                <div id="textContainer">
+                        <object data="src/messageHandler/message.txt" width="300" height="200">
+                                Not supported
+                        </object>
+                </div>
                 <form method="POST" action="src/messageHandler/submit.php">
                         <input name="name" placeholder="Anon" type="text">
                         <input name="message" placeholder="Isn't avian so pog?!" type="text">
