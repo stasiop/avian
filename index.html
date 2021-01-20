@@ -10,13 +10,14 @@
                 onLoadIn();
         ?>
         <body>
+                <link type="text/css" rel="stylesheet" href="Stylesheet.css">
                 <div id="textContainer">
                         <object data="src/messageHandler/message.txt" width="300" height="200">
                                 Not supported
                         </object>
                 </div>
                 <form method="POST" action="src/messageHandler/submit.php">
-                        <input name="name" placeholder="Anon" type="text">
+                        <input class="nameBox" name="name" placeholder="Anon" type="text">
                         <input name="message" placeholder="Isn't avian so pog?!" type="text">
                         <input type="submit" value="submit">
                 </form>
