@@ -1,5 +1,9 @@
 body {
         background-image: url(/src/images/loginPic.jpeg);
+        background-image: url(PAM.jpg); /* ps i hate css comments awww cute  */
+        background-size: cover;
+        background-attachment: fixed;
+        
 }
 div {
         position: absolute;
