@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- bit self explainitory -->
   <meta http-equiv="X-UA-Compatible"> <!-- cool thing that picks default redering engine -->
   <!-- <link rel="stylesheet" type="text/css" href="SF"/> link to stylesheet later (when it's good) -->
-  <style media="screen"> 
+  <style media="screen">
   body{
     margin: 0;
     padding: 0;
@@ -77,6 +77,17 @@
     background-color: #3067b9;
   }
 
+  img {
+   width: 100%;
+   height: auto;
+   opacity: 0.6;
+  }
+  .direction {
+   position: absolute;
+   bottom: 10px;
+   left: 19px;
+   font-size: 13px;
+  }
   </style>
   <title>PAM</title>
 </head>
@@ -88,6 +99,9 @@
         <input type="text" name="username"  autocomplete="off" required>
         <label for="">Username</label>
       </div>
+      <div class="direction">
+         <a href="PAM register/PAMRver10.php">Register</a>
+      </div>
       <div class="input-box">
         <input type="password" name="password"  autocomplete="off" required>
         <label for="">Password</label>
@@ -97,7 +111,6 @@
   </div>
 </body>
 </html>
-
 <script>
     // Work in progress will be base 64 encryptor / AES-128 if i can be bothered
 </script>
