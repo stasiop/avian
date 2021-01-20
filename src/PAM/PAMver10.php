@@ -11,6 +11,7 @@
     font-family: sans-serif;
     background-image: url(PAM.jpg); /* ps i hate css comments awww cute  */
     background-size: cover;
+    background-attachment: fixed;
   }
   .box{
     position: absolute;
