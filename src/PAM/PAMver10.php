@@ -54,7 +54,7 @@
     padding: 10px 0px;
     font-size: 16px;
     color: #fff;
-    transition: .5s;HTMLformVER32455
+    transition: .5s;PAMver10.php
   }
   .box .input-box input:focus ~ label,
   .box .input-box input:valid ~ label{
