@@ -2,7 +2,6 @@ body {
         background-image: url(/src/images/loginPic.jpeg);
         background-size: cover;
         background-attachment: fixed;
-        
 }
 div {
         position: absolute;
@@ -13,9 +12,9 @@ div {
         border: 5px solid #FFFF00;
         padding: 10px;
 }
-button {
+a {
+        font-size: 10px;
         text-align: center;
-        float: center;
 }
 body{
   background-color:#111111;
