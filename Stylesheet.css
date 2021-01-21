@@ -147,19 +147,19 @@ object{
   animation-name: follow;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  color: gainsboro;
+
 }
 
 div{
   width:100%;
   /*margin: 0 auto;*/
-  color: gainsboro
+  color: gainsboro;
 }
 .textContainer{
   animation-name: follow;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  color: blue;
+  color: gainsboro
 }
 form{
   margin-top: 1%;
