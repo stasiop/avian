@@ -1,6 +1,6 @@
 <?php
 	
-	fucntion saveFile(){
+	function saveFile(){
 	STATIC $id = 00000; // id system
 	$data_file = fopen("message.txt", "a+"); 
 	$name = $_POST["name"]; 
