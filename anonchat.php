@@ -2,10 +2,18 @@
         <head></head>
         <?php 
                 function onLoadIn(){
+                        $i=0;
                         
-     
                         $myfile = fopen("src/messageHandler/message.txt", "r") or die("Unable to open file!");
-                        echo fread($myfile,10000000);
+                        $content =fread($myfile,100000000);
+                        $arrayStr=explode(";",$content);
+                        for($i=0;$i<count($arrayStr);$i++){
+                                echo $arrayStr[$i];
+                                ?>
+                                <br>
+                                <?php
+                        }
+                        
                         fclose($myfile);
         
                 }
@@ -28,5 +36,6 @@
         </body>
         
 </html>
+
 
 
