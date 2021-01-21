@@ -1,6 +1,7 @@
 <?php
-	$id = 00000; // id system
 	
+	fucntion saveFile(){
+	STATIC $id = 00000; // id system
 	$data_file = fopen("message.txt", "a+"); 
 	$name = $_POST["name"]; 
 	$message = $_POST["message"];
@@ -9,4 +10,5 @@
 	fclose($data_file);
 	header('Location: /anonchat.php');
 	$id++;
+	}
 ?>
