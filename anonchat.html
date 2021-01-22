@@ -1,33 +1,32 @@
 <html>
         <head></head>
-        <?php 
-                funtion onLoadIn(){
-                        $msgHistoryPath="src/messageHandler/message.txt";
-                        $msgHistory=fopen("src/messageHandler/message.txt","r");
-                        $content=fread($msgHistory);
-                        echo $content;
-                }
-                
-                
-        ?>
-        onLoadIn();
-                
-                
-        
-        <body>
+        <title>AnonChat</title>
+        <body onload="Stan();">
                 <div>
                         <link type="text/css" rel="stylesheet" href="Stylesheet.css">
-                        <div id="textContainer">
-                                <object data="src/messageHandler/message.txt" width="300" height="200">
-                                        Not supported
-                                </object>
+                        <img class="direction" src="/src/images/anon chat neon.png" width="320" height="200">
+                        <div class="textContainer">
+                                <iframe id="GFG" src = "/src/messageHandler/message.txt" style="animation-name: follow; animation-duration: 1s; animation-iteration-count: infinite;" width = "555" height = "555">
+                                        Sorry your browser does not support inline frames.
+                                </iframe>
                         </div>
+                            <script>
+                                Stan();
+                                function Stan() {
+                                var iframeID = document.getElementById("GFG");
+
+                                var iframeCW = (iframeID.contentWindow || iframeID.contentDocument);
+
+                                if (iframeCW.document) iframeCW = iframeCW.document;
+                                iframeCW.body.style.color = "white";
+                                }
+                           </script>
                         <form method="POST" action="src/messageHandler/submit.php">
-                                
+
                                 <input name="message" placeholder="Isn't avian so pog?!" type="text">
                                 <button type="submit" value="submit">Send</button>
                         </form>
                 </div>
         </body>
-        
+
 </html>
