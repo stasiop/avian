@@ -16,7 +16,7 @@
                                 var iframeID = document.getElementById("GFG");
 
                                 var iframeCW = (iframeID.contentWindow || iframeID.contentDocument);
-
+                                document.getElementById('GFG').onload = function(){ setTimeout("document.getElementById('GFG').contentWindow.scrollTo(0, 99999999)", 1) }
                                 if (iframeCW.document) iframeCW = iframeCW.document;
                                 iframeCW.body.style.color = "white";
                                 }
