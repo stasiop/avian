@@ -1,7 +1,7 @@
 <?php
 
 	function saveFile(){
-	$ID = 0
+	$ID = 0;
 	$data_file = fopen("message.txt", "a+");
 	$name = $_POST["name"];
 	$message = $_POST["message"];
