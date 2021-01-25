@@ -1,15 +1,20 @@
 <?php
 
 	function saveFile(){
-	$ID = 0;
+	$IDstr = file_get_contents("id.txt");
+	$IDstr = (int) $ID;
+	$ID++;
+	$ID4 = sprintf("%04s", $ID);
 	$data_file = fopen("message.txt", "a+");
+	$IDsave = fopen("id.txt", "w+");
 	$name = $_POST["name"];
 	$message = $_POST["message"];
-	$text_to_write = $ID . " " . "Anon "  . $name . ": " . $message . "/n";
-
+	$text_to_write = $ID4 . " " . "Anon "  . $name . ": " . $message . ";";
+	fwrite('id.txt', $ID);
 	fwrite($data_file, $text_to_write);
 	fclose($data_file);
 	header('Location: /anonchat.html');
+	fwrite($IDsave, $ID);
 	}
 	saveFile();
 ?>
