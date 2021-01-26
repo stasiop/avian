@@ -2,7 +2,7 @@
 
 	function saveFile(){
 	$IDstr = file_get_contents("id.txt");
-	$IDstr = (int) $ID;
+	$ID = (int) $IDstr;
 	$ID++;
 	$ID4 = sprintf("%04s", $ID);
 	$data_file = fopen("message.txt", "a+");
