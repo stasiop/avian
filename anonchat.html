@@ -6,12 +6,54 @@
                         <link type="text/css" rel="stylesheet" href="Stylesheet.css">
                         <img class="direction" src="/src/images/anon chat neon.png" width="320" height="200">
                         <div class="textContainer">
-                                <iframe id="GFG" src = "/src/messageHandler/message.txt" width = "100%" height = "100%"style="border: 0px">
-                                        Sorry your browser does not support inline frames. use GNU IceCat
-                                </iframe>
+                                <?php
+                                      $x = 0
+                                      while($x < 5){
+                                        $UFID = file_get_contents(/src/messageHandler/id.txt);  
+                                      }
+
+
+                                      
+                                  /*  function limitS($text, $limit) {
+                                       if (str_word_count($text, 0) > $limit) {
+                                          $words = str_word_count($text, 1);
+                                          $pos   = array_keys($words);
+                                          $text  = substr($text, 0, $pos[$limit]); // look this was a function when i was reading message.txt which would probably be a better system but i can't figure out how to read a new line
+                                        }
+                                        
+                                      }  */
+                                      while($x < 5){
+                                      $ID = (int) $IDstr;
+                                      sleep(0.1);
+                                    }
+                                      while($x < 5){
+                                      $PID = (int) $IDstr;
+                                      sleep(3);
+                                    }
+
+                                    while($ID != $PID){
+                                ?>
+                                      <iframe id="GFG" src = "/src/messageHandler/message.txt" width = "100%" height = "100%"style="border: 0px">
+                                        Sorry your browser does not support inline frames. Use GNU IceCat.
+                                      </iframe>
+                                      
+                                <?php
+                                  sleep(3);
+                                }
+                                ?>
+
                         </div>
+                        <?php>
+                          while($x < 5){
+                            ?>
                             <script>
                                 Autoscroll();
+                            </script>
+                            <?php
+                          }
+                          ?>
+                            
+                            <script>
                                 function Autoscroll() { // this is good
                                 var iframeID = document.getElementById("GFG");
 
