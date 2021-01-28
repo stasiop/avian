@@ -1,6 +1,32 @@
-<link type="text/css" rel="stylesheet" href="Stylesheet1.css">
-<div>
-        <button onclick="window.location.href='/anonchat.html'">Log in as anon</button>
-        <button onclick="window.location.href='/src/PAM/PAMver10.php'">Log in</button>
-        <br>
-</div>
+<html>
+        <head></head>
+        <title>AnonChat</title>
+        <body onload="Stan();">
+                <div>
+                        <link type="text/css" rel="stylesheet" href="Stylesheet.css">
+                        <img class="direction" src="/src/images/anon chat neon.png" width="320" height="200">
+                        <div class="textContainer">
+                                <iframe id="GFG" src = "/src/messageHandler/message.txt" width = "100%" height = "100%" style="border: 0px;">
+                                        Sorry your browser does not support inline frames.
+                                </iframe>
+                        </div>
+                            <script>
+                                Stan();
+                                function Stan() { // this is annoying
+                                var iframeID = document.getElementById("GFG");
+
+                                var iframeCW = (iframeID.contentWindow || iframeID.contentDocument);
+                                document.getElementById('GFG').onload = function(){ setTimeout("document.getElementById('GFG').contentWindow.scrollTo(0, 99999999)", 1) }
+                                if (iframeCW.document) iframeCW = iframeCW.document;
+                                iframeCW.body.style.color = "white";
+                                }
+                           </script>
+                        <form method="POST" action="src/messageHandler/submit.php">
+
+                                <input name="message" placeholder="Isn't avian so pog?!" type="text">
+                                <button type="submit" value="submit">Send</button>
+                        </form>
+                </div>
+        </body>
+
+</html>
