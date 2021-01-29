@@ -9,7 +9,7 @@
 	$IDsave = fopen("id.txt", "w+");
 	$name = $_POST["name"];
 	$message = $_POST["message"];
-	$text_to_write = /* $ID4. " " . */ "Anon "  . $name . ": " . $message . ";";
+	$text_to_write = "Anon "  . $name . ": " . $message . ";";
 	fwrite('id.txt', $ID);
 	fwrite($data_file, $text_to_write);
 	fclose($data_file);
