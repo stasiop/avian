@@ -1,4 +1,4 @@
 # AVIAN
-the next generation of Avian 
+The next generation of Avian.
 <br>
-Don't worry, it still combustion
+Don't worry, it still combustion.
