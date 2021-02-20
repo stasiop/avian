@@ -1,4 +1,4 @@
-# avian-gpl3
-avian chat program under gpl3 not gpl2
+# avian
+the next generation of Avian 
 <br>
 Don't worry, it still combustion
