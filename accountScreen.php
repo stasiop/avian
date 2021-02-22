@@ -8,7 +8,7 @@ if(!isset($_COOKIE["user"])) {
 <table width="10%" border="1" class="table">
     <tr>
         <td><a href="/anonchat.php">anonchat</a></td>
-		<td><a href="/src/dm/dm_generator.php">Private DM w/ stan</a></td>
+		<td><a href="/src/dm/dm_generator.php">generate DM</a></td>
     </tr>
 </table>
 <form method="POST" action="/src/dm/dm_finder.php">
