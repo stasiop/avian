@@ -3,6 +3,9 @@ session_start();
 if (isset($_POST['DMnum'])) {
 	$_SESSION['DMnum'] = $_POST['DMnum'];
 }
+if (!isset($_SESSION['DMnum'])) {
+	$_SESSION['DMnum'] = $_COOKIE['user'];
+}
 ?>
 <body onload="Autoscroll();">
 	<iframe id="GFG" src = '/src/dm/<?php echo $_SESSION['DMnum'];?>.txt' width = "50%" height = "50%"style="border: 0px">
