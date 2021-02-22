@@ -10,10 +10,11 @@ if(!isset($_COOKIE["user"])) {
                 echo "doesn't exist (";
                 echo $_COOKIE["user"] . ".txt)\n";
                 $myfile = fopen($_COOKIE["user"] . ".txt", "a+") or die("\nUnable to create file!");
-                $txt = " ";
+                $txt = "";
                 fwrite($myfile, $txt);
                 fclose($myfile);
         }
 }
-header ('Location: ' . $_COOKIE["user"] . ".txt");
+$_SESSION["bdm"] = $_COOKIE["user"];
+header ('Location: dm_finder.php');
 ?>
