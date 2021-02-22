@@ -1,12 +1,10 @@
 <?php
 session_start();
-$cookie_name="user";
-$cookie_value=rand(0,32767);
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+$name = $_COOKIE['user']
+$data_file = fopen("/src/dm/" . $_SESSION['DMnum'] . ".txt", "a+");
+$message = $_POST["message"];
+$text_to_write = $name . ": " . $message . "\n";
+fwrite($data_file, $text_to_write);
+fclose($data_file);
+header('Location: /src/dm/dm_finder.php');
 ?>
-<a href="/src/dm/dm_generator.php">generate a dm</a>
-<form method="POST" action="/src/dm/dm_finder.php">
-        <input name="DMnum" placeholder="32767" type="text">
-	<button type="submit" value="submit">Send</button>
-</form>
-
