@@ -7,6 +7,7 @@ if (!isset($_SESSION['DMnum'])) {
 	$_SESSION['DMnum'] = $_COOKIE['user'];
 }
 ?>
+<title>DM | #<?php echo $dmnum ?></title>
 <link type="text/css" rel="stylesheet" href="/Stylesheet.css">
 <body onload="Autoscroll();">
 <div class="textContainer">
