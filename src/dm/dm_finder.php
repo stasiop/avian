@@ -9,11 +9,11 @@ if (!isset($_SESSION['DMnum'])) {
 	$dmnum = $_SESSION['DMnum'];
 }
 ?>
-<title>DM | #<?php echo $dmnum ?></title>
+<title>DM | #<?php echo $_SESSION['DMnum'] ?></title>
 <link type="text/css" rel="stylesheet" href="/Stylesheet.css">
 <body onload="Autoscroll();">
 <div class="textContainer">
-	<iframe id="GFG" src = '/src/dm/<?php echo $_SESSION['DMnum'];?>.txt' width = "100%" height = "87.5%"style="border: 0px">
+	<iframe id="GFG" src = "/src/dm/<?php echo $_SESSION['DMnum'];?>.txt" width = "60%" height = "87.5%"style="border: 0px">
 		Sorry your browser does not support inline frames. Use GNU IceCat.
     </iframe>
 </div>
@@ -29,6 +29,24 @@ if (!isset($_SESSION['DMnum'])) {
 		document.getElementById('GFG').onload = function(){ setTimeout("document.getElementById('GFG').contentWindow.scrollTo(0, 99999999)", 1) }
 		if (iframeCW.document) iframeCW = iframeCW.document;
 		iframeCW.body.style.color = "white";
+		var x = document.getElementById("vc");
+		  if (x.style.display === "none") {
+			x.style.display = "block";
+		  } else {
+			x.style.display = "none";
+		  }
 		}
+		function showJitsiCall() {
+		  var x = document.getElementById("vc");
+		  if (x.style.display === "none") {
+			x.style.display = "block";
+		  } else {
+			x.style.display = "none";
+		  }
+		} 
 	</script>
 </body>
+<button id="myButton1" onclick="showJitsiCall()">show/hide call</button>
+<iframe id="vc" src="https://meet.jit.si/<?php echo $dmnum; ?>" width="100%" height="500px">
+	your pc sucks
+</iframe>
