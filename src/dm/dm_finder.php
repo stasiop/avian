@@ -47,6 +47,6 @@ if (!isset($_SESSION['DMnum'])) {
 	</script>
 </body>
 <button id="myButton1" onclick="showJitsiCall()">show/hide call</button>
-<iframe id="vc" src="https://meet.jit.si/<?php echo $dmnum; ?>" width="100%" height="500px">
+<iframe id="vc" src="https://meet.jit.si/<?php echo $_SESSION['DMnum']; ?>" width="100%" height="500px">
 	your pc sucks
 </iframe>
