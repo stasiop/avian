@@ -9,9 +9,11 @@ if (!isset($_SESSION['DMnum'])) {
 ?>
 <link type="text/css" rel="stylesheet" href="/Stylesheet.css">
 <body onload="Autoscroll();">
-	<iframe id="GFG" src = '/src/dm/<?php echo $_SESSION['DMnum'];?>.txt' width = "50%" height = "50%"style="border: 0px">
+<div class="textContainer">
+	<iframe id="GFG" src = '/src/dm/<?php echo $_SESSION['DMnum'];?>.txt' width = "100%" height = "87.5%"style="border: 0px">
 		Sorry your browser does not support inline frames. Use GNU IceCat.
     </iframe>
+</div>
 	<form method="POST" action="/src/dm/submitDM.php">
         <input name="message" placeholder="Isn't avian so pog?!" type="text">
         <button type="submit" value="submit">Send</button>
