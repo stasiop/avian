@@ -2,9 +2,11 @@
 session_start();
 if (isset($_POST['DMnum'])) {
 	$_SESSION['DMnum'] = $_POST['DMnum'];
+	$dmnum = $_SESSION['DMnum'];
 }
 if (!isset($_SESSION['DMnum'])) {
 	$_SESSION['DMnum'] = $_COOKIE['user'];
+	$dmnum = $_SESSION['DMnum'];
 }
 ?>
 <title>DM | #<?php echo $dmnum ?></title>
