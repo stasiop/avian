@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- bit self explainitory -->
   <meta http-equiv="X-UA-Compatible"> <!-- cool thing that picks default redering engine -->
-  <!-- <link rel="stylesheet" type="text/css" href="SF"/> link to stylesheet later (when it's good) -->
+  <<link rel="stylesheet" type="text/css" href="pamstylesheet.css"/>
 
   <title>PAM</title>
 </head>
