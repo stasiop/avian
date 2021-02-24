@@ -1,6 +1,13 @@
 <?php	
 		$data_file = fopen("message.txt", "a+");
 		$message = $_POST["message"];
+		$idFile=fopen("id.txt","w+");
+		$id=(int)$idFile;
+		echo $id;
+		$id=$id+1;
+		echo $id;
+		fwrite($idFile,$id);
+		fclose($idFile);
 		if (isset($_COOKIE['user'])) {
 			$name = "Anon (" . $_COOKIE['user'] . ")";
 		} else {
