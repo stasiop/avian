@@ -14,6 +14,7 @@
       <div class="input-box">
         <input type="text" name="username"  autocomplete="off" required>
         <label for="">Username</label>
+        
       </div>
       <div class="direction">
          <a href="PAM register/PAMRver10.php">Register</a>
