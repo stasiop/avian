@@ -1,5 +1,5 @@
 # AVIAN
-We are not responsible for anything that may happen if you use avian, e.g, autism
+We are not responsible for anything that may happen if you use avian, e.g, you turn into stan (scary)
 <br>
 please don't sue us
 <br>
