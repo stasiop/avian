@@ -58,8 +58,16 @@
                                                         loadDoc();
                                                         window.asdf=true;
                                                         window.ghjk=false;
-                                                        
-                                                      
+                                                        if(window.asdf){
+                                                                window.asdf=false;
+                                                        }
+                                                        if(!window.asdf)
+                                                        if(clientId!=serverID){
+                                                                console.log("differentIDs")
+                                                        }else{
+
+                                                                console.log("Same ID's Dumbass");
+                                                        }
                                                         if(clientId!=serverID){
                                                                 
                                                                                 //console.log("differentID")
@@ -120,6 +128,7 @@
         </body>
 
 </html>
+
 
 
 
