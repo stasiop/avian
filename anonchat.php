@@ -14,10 +14,27 @@
                                         //}
                                 -->		
                                 	
-                                <script type="text/javascript">        
+                                <script type="text/javascript">   
+                                function getCookie(cname) {
+                                                var name = cname + "=";
+                                                var decodedCookie = decodeURIComponent(document.cookie);
+                                                var ca = decodedCookie.split(';');
+                                                for(var i = 0; i <ca.length; i++) {
+                                                var c = ca[i];
+                                                while (c.charAt(0) == ' ') {
+                                                c = c.substring(1);
+                                                }
+                                                if (c.indexOf(name) == 0) {
+                                                        
+                                                return c.substring(name.length, c.length);
+                                                }
+                                                }
+                                                return "";
+                                        }     
                                         var serverID=0;
                                         var clientId=0;
                                         var x=true;
+                                        
                                         function loadDoc() {
                                                 console.log("Loaded Document")
                                                 var xhttp = new XMLHttpRequest();
@@ -31,23 +48,45 @@
                                                         xhttp.send();
                                                 }
                                         const task = async () => {
-                                                console.log("taskDone")
+                                                
                                                 while(x) {
+
                                                         //fuck i hate my fucking life
                                                         await new Promise(r => setTimeout(r, 1000));
+                                                        
+                                                        
+                                                        loadDoc();
+                                                        window.asdf=true;
+                                                        window.ghjk=false;
+                                                        
+                                                      
+                                                        if(clientId!=serverID){
+                                                                
+                                                                                //console.log("differentID")
+                                                                clientId=serverID;
+                                                                document.cookie="clientID="+clientId;
+                                                                //window.location.reload();
+                                                                                
+                                                                                
+                                                        }else{
+                                                                                //console.log("sameID");
+                                                        };
+                                                        window.asdf=false;
+                                                        window.ghjk=false;
+                                                                
+                                                                
+                                                        window.ghjk=true;
+
+                                                        
+                                                        if(getCookie("clientID")!=null){
+                                                        clientId=getCookie("clientID");
+
+                                                        }
+                                                        
+                                                        
                                                         console.log("serverID "+serverID)
                                                         console.log("clientID "+clientId)
-                                                        loadDoc();
-                                                        if(clientId!=serverID){
                                                         
-                                                                console.log("differentID")
-                                                                clientId=serverID;
-                                                                //window.location.reload();
-                                                                
-                                                                
-                                                        }else{
-                                                                //console.log("sameID");
-                                                        };
                                                         
                                                 };
                                         }
