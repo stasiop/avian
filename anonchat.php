@@ -61,36 +61,32 @@
                                                         if(window.asdf){
                                                                 window.asdf=false;
                                                         }
-                                                        if(!window.asdf)
+                                                        if(!window.asdf){
                                                         if(clientId!=serverID){
+                                                                clientId=serverID;
+                                                                document.cookie="clientID="+clientId;
+                                                                window.location.reload(true);
                                                                 console.log("differentIDs")
                                                         }else{
-
+                                                                
                                                                 console.log("Same ID's Dumbass");
                                                         }
                                                         if(clientId!=serverID){
                                                                 
                                                                                 //console.log("differentID")
-                                                                clientId=serverID;
-                                                                document.cookie="clientID="+clientId;
+                                                                
                                                                 //window.location.reload();
                                                                                 
                                                                                 
                                                         }else{
                                                                                 //console.log("sameID");
                                                         };
-                                                        window.asdf=false;
-                                                        window.ghjk=false;
-                                                                
-                                                                
-                                                        window.ghjk=true;
-
                                                         
                                                         if(getCookie("clientID")!=null){
                                                         clientId=getCookie("clientID");
 
                                                         }
-                                                        
+                                                        }
                                                         
                                                         console.log("serverID "+serverID)
                                                         console.log("clientID "+clientId)
@@ -128,8 +124,6 @@
         </body>
 
 </html>
-
-
 
 
 
