@@ -4,12 +4,12 @@ $_SESSION["DMnum"] = $_POST["DMnum"];
 if(!isset($_COOKIE["user"])) {
         echo "YOU FOOL, YOUR COOKIE ISN'T SET";
 } else {
-        if (file_exists($_COOKIE["user"] . ".txt")) {
+        if (file_exists($_COOKIE["user"] . ".html")) {
                 echo "The file exists";
         } else {
                 echo "doesn't exist (";
-                echo $_COOKIE["user"] . ".txt)\n";
-                $myfile = fopen($_COOKIE["user"] . ".txt", "a+") or die("\nUnable to create file!");
+                echo $_COOKIE["user"] . ".html)\n";
+                $myfile = fopen($_COOKIE["user"] . ".html", "a+") or die("\nUnable to create file!");
                 $txt = "";
                 fwrite($myfile, $txt);
                 fclose($myfile);
