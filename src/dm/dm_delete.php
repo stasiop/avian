@@ -1,4 +1,4 @@
 <?php
-unlink($_COOKIE["user"] . ".txt");
+unlink($_COOKIE["user"] . ".html");
 header('Location: /accountScreen.php');
 ?>
