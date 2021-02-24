@@ -6,7 +6,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="SF"/> link to stylesheet later (when it's good) -->
 
   <title>PAM</title>
- </head>
+</head>
 <body>
   <div class="box">
     <h2>Login</h2>
