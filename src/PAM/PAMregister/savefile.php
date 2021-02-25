@@ -19,7 +19,7 @@
 			
 				$times++;
 				if($times >= 9999) {
-					header("location: /src/PAM/nametaken.html");
+					echo "<p> name is taken </p>";
 				}	
 			}
 		}
