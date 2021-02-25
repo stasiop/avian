@@ -10,10 +10,6 @@
   <div class="box">
     <h2>Register</h2>
     <form method="post" action="savefile.php">
-	   <div class="input-box">
-        <input type="text" name="email"  autocomplete="off" required>
-        <label for="">Email</label>
-      </div>
       <div class="input-box">
         <input type="text" name="username"  autocomplete="off" required>
         <label for="">Username</label>
