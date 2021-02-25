@@ -30,5 +30,5 @@
 		$text_to_write = $name . ": " . $message . "\n";
 		fwrite($data_file, $text_to_write);
 		fclose($data_file);
-		//header('Location: /anonchat.php');
+		header('Location: /anonchat.php');
 ?>
