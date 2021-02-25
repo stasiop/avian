@@ -20,6 +20,7 @@
 				$times++;
 				if($times >= 9999) {
 					echo "<p> name is taken </p>";
+					$x++;
 				}	
 			}
 		}
