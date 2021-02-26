@@ -17,8 +17,6 @@
 		$hopefullyp = $lines[$passwordloc];
 		$hopefullyp = trim($hopefullyp);
 		$username = $lines[$line_number];
-		echo "1 $hopefullyp";
-		echo "2 $password";
 		if ($password == $hopefullyp){
 			$Eusername = base64_encode($username);
 			setcookie("Username", $Eusername);
