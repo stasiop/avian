@@ -27,7 +27,7 @@
 		} else {
 			$name = "Anon";
 		}
-		$text_to_write = $name . ": " . $message . "\n";
+		$text_to_write = $name . ": " . $message . "<br>";
 		fwrite($data_file, $text_to_write);
 		fclose($data_file);
 		header('Location: /anonchat.php');
