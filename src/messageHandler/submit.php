@@ -22,8 +22,11 @@
 		//echo $id;
 		//fwrite($idFile,$id);
 		//fclose($idFile);
-		if (isset($_COOKIE['user'])) {
-			$name = "Anon (" . $_COOKIE['user'] . ")";
+		if (isset($_COOKIE['Username'])) {
+			$ufname = $_COOKIE['Username'];
+			$sfname = base64_decode($ufname)
+			$name = substr($sfname, -5)
+			
 		} else {
 			$name = "Anon";
 		}
