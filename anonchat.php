@@ -72,7 +72,7 @@
                                                                 
                                                                                 //console.log("differentID")
                                                                 
-                                                                //window.location.reload();
+                                                                window.location.reload();
                                                                                 
                                                                                 
                                                         }else{
