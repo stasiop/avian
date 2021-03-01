@@ -59,25 +59,17 @@
                                                                 window.asdf=false;
                                                         }
                                                         if(!window.asdf){
-                                                        if(clientId!=serverID){
+                                                        //if(clientId!=serverID){
                                                                 clientId=serverID;
                                                                 document.cookie="clientID="+clientId;
-                                                                window.location.reload(true);
+                                                                var iframe = document.getElementById('GFG');
+                                                                iframe.src = iframe.src;
                                                                 console.log("differentIDs")
-                                                        }else{
+                                                        //}else{
                                                                 
                                                                 console.log("Same ID's Dumbass");
-                                                        }
-                                                        if(clientId!=serverID){
-                                                                
-                                                                                //console.log("differentID")
-                                                                
-                                                                window.location.reload();
-                                                                                
-                                                                                
-                                                        }else{
-                                                                                //console.log("sameID");
-                                                        };
+                                                        //}
+                                                        
                                                         
                                                         if(getCookie("clientID")!=null){
                                                         clientId=getCookie("clientID");
