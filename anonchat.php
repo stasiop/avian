@@ -24,14 +24,17 @@
                                                 return "";
                                         }     
                                         window.qwer=true;
+                                        window.asdf=true;
+                                        window.zxcv=true;
                                         if(window.qwer){
                                                 var serverID=0;
                                                 var clientId=0;
+
                                                 var x=true;
                                                 window.qwer=false;
                                         }
                                         
-                                        
+                                        window.asdf=true;
                                         function loadDoc() {
                                                 console.log("Loaded Document")
                                                 var xhttp = new XMLHttpRequest();
@@ -41,7 +44,7 @@
                                                         //console.log(serverID)
                                                 }
                                                 };
-                                                        xhttp.open("GET", "/src/messageHandler/id.txt", true);
+                                                        xhttp.open("GET", "/src/messageHandler/WouldntItBeNiceToDie.txt", true);
                                                         xhttp.send();
                                                 }
                                         const task = async () => {
@@ -53,29 +56,45 @@
                                                         
                                                         
                                                         loadDoc();
-                                                        window.asdf=true;
-                                                        window.ghjk=false;
+                                                        
+                                                        /*window.ghjk=false;
                                                         if(window.asdf){
                                                                 window.asdf=false;
                                                         }
                                                         if(!window.asdf){
-                                                        //if(clientId!=serverID){
+                                                        if(clientId!=serverID){
                                                                 clientId=serverID;
                                                                 document.cookie="clientID="+clientId;
                                                                 var iframe = document.getElementById('GFG');
                                                                 iframe.src = iframe.src;
                                                                 console.log("differentIDs")
-                                                        //}else{
+                                                        }else{
                                                                 
                                                                 console.log("Same ID's Dumbass");
-                                                        //}
+                                                        }
                                                         
                                                         
                                                         if(getCookie("clientID")!=null){
                                                         clientId=getCookie("clientID");
 
+                                                        }*/
+                                                        if(!window.asdf){
+                                                                if(!window.zvcx){
+                                                                        if(serverID!=clientId){
+                                                                        console.log("DifferentIDS");
+                                                                        var iframe = document.getElementById('GFG');
+                                                                        iframe.src = iframe.src;
+                                                                        clientId=serverID;
+                                                                        }
+                                                                }else{
+                                                                        window.zxcv=false;
+                                                                }
+                                                                
+                                                        
+                                                        }else{
+                                                                window.asdf=false;
                                                         }
-                                                        }
+                                                        
                                                         
                                                         console.log("serverID "+serverID)
                                                         console.log("clientID "+clientId)
