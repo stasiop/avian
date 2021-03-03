@@ -1,19 +1,32 @@
 <?php	
 		$data_file = fopen("message.html", "a+");
 		$message = $_POST["message"];
-		$idFile=fopen("id.txt","w+");
+		
 		//$idContents=file_get_contents("ids.txt",true);
 		//echo $idContents;
-		$fileName="id.txt";
-		$idFileRead=fopen($fileName,"r");
-		$idContents=fread($idFileRead,"1024");
-		$idInt=(int)$idContents;
+		//$fileName="id.txt";
+		//echo readfile("id.txt");
+		//echo readfile("GODFUCKPHP.txt");
+		$idFileRead=fopen("WouldntItBeNiceToDie.txt","r+");
+		$idContents=readfile("WouldntItBeNiceToDie.txt");
+		echo "GodFuckHereGoesInt";
+		//(int)readfile("WouldntItBeNiceToDie.txt");
+		$idInt=(int)file_get_contents("WouldntItBeNiceToDie.txt");
 		echo $idInt;
+
+		//echo $idContents;
+		//echo $idContents;
+		//$idInt=(int)$idContents;
+		//echo $idInt;
 		$idInt++;
-		echo $idInt;
-		fwrite($idFile,$idInt);
-		fclose($idFile);
 		fclose($idFileRead);
+		echo "After +1 Has Been Applied";
+		echo (string) $idInt;
+		echo gettype((string) $idInt);
+		$idFile=fopen("WouldntItBeNiceToDie.txt","w+");
+		fwrite($idFile,(string)$idInt);
+		
+		fclose($idFile);
 		
 		//echo file_get_contents("id.txt");
 		//$id=(int)$idFile;
