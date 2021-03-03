@@ -14,7 +14,7 @@
 				if(strpos($ids,$rande) === false) {
 					$dusername = $username . "#" . sprintf('%04u', $rande);
 					$fusername = trim($dusername);
-					fwrite($MAT, $email . "\n ");
+					fwrite($MAT, $email . "\n");
 					fwrite($MAT, $fusername . "\n");
 					fwrite($MAT, $password . "\n" . "\n");                     
 					$x++;				
