@@ -77,13 +77,15 @@
                                                         if(getCookie("clientID")!=null){
                                                         clientId=getCookie("clientID");
 
-                                                        }*/
+                                                        }*/console.log("serverID "+serverID)
+                                                        console.log("clientID "+clientId)
                                                         if(!window.asdf){
                                                                 if(!window.zvcx){
                                                                         if(serverID!=clientId){
                                                                         console.log("DifferentIDS");
                                                                         var iframe = document.getElementById('GFG');
                                                                         iframe.src = iframe.src;
+                                                                        document.getElementById('GFG').contentWindow.document.body.style.color='white';
                                                                         clientId=serverID;
                                                                         }
                                                                 }else{
@@ -96,8 +98,7 @@
                                                         }
                                                         
                                                         
-                                                        console.log("serverID "+serverID)
-                                                        console.log("clientID "+clientId)
+                                                        
                                                         
                                                         
                                                 };
@@ -105,7 +106,7 @@
                                         task()
                                         
                                 </script>                         
-                                      <iframe id="GFG" src = "/src/messageHandler/message.html" width = "100%" height = "100%"style="border: 0px">
+                                      <iframe id="GFG" src = "/src/messageHandler/message.html" width = "100%" height = "100%"style="border : 0px; color:white">
                                         Sorry your browser does not support inline frames. Use GNU IceCat.
                                       </iframe>
                         </div>
@@ -136,6 +137,12 @@
         </body>
 
 </html>
+
+
+
+
+
+
 
 
 
