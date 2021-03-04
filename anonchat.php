@@ -41,7 +41,6 @@
                                                 xhttp.onreadystatechange = function() {
                                                 if (this.readyState == 4 && this.status == 200) {
                                                         serverID = this.responseText;
-                                                        //console.log(serverID)
                                                 }
                                                 };
                                                         xhttp.open("GET", "/src/messageHandler/WouldntItBeNiceToDie.txt", true);
@@ -50,34 +49,16 @@
                                         const task = async () => {
                                                 
                                                 while(x) {
-
+                                                        if (iframeCW.document) iframeCW = iframeCW.document;
+                                                        iframeCW.body.style.color = "white";
+                                                        }
                                                         //fuck i hate my fucking life
                                                         await new Promise(r => setTimeout(r, 1000));
                                                         
                                                         
                                                         loadDoc();
                                                         
-                                                        /*window.ghjk=false;
-                                                        if(window.asdf){
-                                                                window.asdf=false;
-                                                        }
-                                                        if(!window.asdf){
-                                                        if(clientId!=serverID){
-                                                                clientId=serverID;
-                                                                document.cookie="clientID="+clientId;
-                                                                var iframe = document.getElementById('GFG');
-                                                                iframe.src = iframe.src;
-                                                                console.log("differentIDs")
-                                                        }else{
-                                                                
-                                                                console.log("Same ID's Dumbass");
-                                                        }
-                                                        
-                                                        
-                                                        if(getCookie("clientID")!=null){
-                                                        clientId=getCookie("clientID");
-
-                                                        }*/console.log("serverID "+serverID)
+                                                        console.log("serverID "+serverID)
                                                         console.log("clientID "+clientId)
                                                         if(!window.asdf){
                                                                 if(!window.zvcx){
@@ -137,12 +118,6 @@
         </body>
 
 </html>
-
-
-
-
-
-
 
 
 
