@@ -19,6 +19,19 @@ if ($uploadOk == 0) {
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 	echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+		$idFileRead=fopen("WouldntItBeNiceToDie.txt","r+");
+		$idContents=readfile("WouldntItBeNiceToDie.txt");
+		echo "GodFuckHereGoesInt";
+		$idInt=(int)file_get_contents("WouldntItBeNiceToDie.txt");
+		echo $idInt;
+		$idInt++;
+		fclose($idFileRead);
+		echo "After +1 Has Been Applied";
+		echo (string) $idInt;
+		echo gettype((string) $idInt);
+		$idFile=fopen("WouldntItBeNiceToDie.txt","w+");
+		fwrite($idFile,(string)$idInt);
+		fclose($idFile);
 		if (isset($_COOKIE['user'])) {
 			$name = "Anon (" . $_COOKIE['user'] . ")";
 		} else {
