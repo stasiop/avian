@@ -44,7 +44,9 @@
 		}
 
 		$text_to_write = $name . ": " . $message . "<br>";
+		if(strlen($text_to_write)<250){
 		fwrite($data_file, $text_to_write);
+		}
 		fclose($data_file);
 		header('Location: /anonchat.php');
 ?>
