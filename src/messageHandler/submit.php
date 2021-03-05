@@ -4,14 +4,14 @@
 		
 		//$idContents=file_get_contents("ids.txt",true);
 		//echo $idContents;
-		//$fileName="id.txt";
-		//echo readfile("id.txt");
+		//$fileName="WouldntItBeNiceToDie.txt";
+		//echo readfile("WouldntItBeNiceToDie.txt");
 		//echo readfile("GODFUCKPHP.txt");
-		$idFileRead=fopen("id.txt","r+");
-		$idContents=readfile("id.txt");
+		$idFileRead=fopen("WouldntItBeNiceToDie.txt","r+");
+		$idContents=readfile("WouldntItBeNiceToDie.txt");
 		echo "GodFuckHereGoesInt";
 		//(int)readfile("WouldntItBeNiceToDie.txt");
-		$idInt=(int)file_get_contents("id.txt");
+		$idInt=(int)file_get_contents("WouldntItBeNiceToDie.txt");
 		echo $idInt;
 
 		//echo $idContents;
@@ -23,12 +23,12 @@
 		echo "After +1 Has Been Applied";
 		echo (string) $idInt;
 		echo gettype((string) $idInt);
-		$idFile=fopen("id.txt","w+");
+		$idFile=fopen("WouldntItBeNiceToDie.txt","w+");
 		fwrite($idFile,(string)$idInt);
 		
 		fclose($idFile);
 		
-		//echo file_get_contents("id.txt");
+		//echo file_get_contents("WouldntItBeNiceToDie.txt");
 		//$id=(int)$idFile;
 		//echo $id;
 		//$id=$id+1;
@@ -38,12 +38,12 @@
 		if (isset($_COOKIE['user'])) {
 			$ufname = $_COOKIE["user"];
 			$sfname = base64_decode($ufname);
-			$name = substr($sfname, 0, -6);	
+			$name = substr($sfname, 0, -6);	#0000
 		} else {
 			$name = "Anon";
 		}
 
-		$text_to_write = $name . ": " . $message . "<br>";
+		$text_to_write = "<br>" . $name . ": " . $message;
 		if(strlen($text_to_write)<250){
 		fwrite($data_file, $text_to_write);
 		}
