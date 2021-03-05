@@ -1,30 +1,30 @@
 @keyframes lineAnim{
         0%{
-                background: linear-gradient(to right, rgb(206, 87, 170), rgb(50,0,150));
+                color: linear-gradient(to right, rgb(206, 87, 170), rgb(50,0,150));
         }
         12.5%{
-                background: linear-gradient(to right,rgb(167,65,165), rgb(89,21,155));
+                color: linear-gradient(to right,rgb(167,65,165), rgb(89,21,155));
         }
         25%{
-                background: linear-gradient(to right, rgb(128,43,160), rgb(128,43,160));
+                color: linear-gradient(to right, rgb(128,43,160), rgb(128,43,160));
         }
         37.5%{
-                background: linear-gradient(to right, rgb(89,21,155), rgb(167,65,165));
+                color: linear-gradient(to right, rgb(89,21,155), rgb(167,65,165));
         }
         50%{
-                background: linear-gradient(to right, rgb(50,0,150), rgb(206, 87, 170));
+                color: linear-gradient(to right, rgb(50,0,150), rgb(206, 87, 170));
         }
         67.5%{
-                background: linear-gradient(to right, rgb(89,21,155) , rgb(167,65,165));
+                color: linear-gradient(to right, rgb(89,21,155) , rgb(167,65,165));
         }
         75%{
-                background: linear-gradient(to right, rgb(128,43,160), rgb(128,43,160));
+                color: linear-gradient(to right, rgb(128,43,160), rgb(128,43,160));
         }
         87.5%{
-                background: linear-gradient(to right,rgb(167,65,165), rgb(89,21,155));
+                color: linear-gradient(to right,rgb(167,65,165), rgb(89,21,155));
         }
         100%{
-                background: linear-gradient(to right, rgb(206, 87, 170) ,rgb(50,0,150));
+                color: linear-gradient(to right, rgb(206, 87, 170) ,rgb(50,0,150));
         }
 }
 body{
@@ -32,257 +32,26 @@ body{
         font-family: 'Courier New', Courier, monospace;
 }
 
-#anon{
-        float: left;
-        margin-left: 4%;
-        margin-top: 10%;
-}
-#login{
-        margin-left: 50%;
-        margin-top: -15.4%;
-}
-/* button{
-        background-color: #000000;
-        width: 40%;
-        height: 25%;
-        align-self: center;
-        margin-left: 10%;
-        color: #ffffff;       
-        
-} */
-
-#container{
-        background-color: #111111;
-        color: #ffffff;
-        width: 100%;
-        height: 80%;
-        
-        left: 50%;
-        
-}
-#Title{
-        align-self: center;
-        font-size: 300%;
-        margin-left: 34%;
-        padding-top: 5%;
-}
-
-/*hr {
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-*/
-#brReplacement{
-        height: 0.9%;
-}
-#hr1{
-        animation-delay:0.16s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr2{
-        animation-delay:0.32s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr3{
-        animation-delay:0.48s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr4{
-        animation-delay:0.64s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}       
-#hr5{
-        animation-delay:0.8s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr6{
-        animation-delay:1s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#dms{
-	    background-color: #000000;
-        width: 20%;
-        height: 10%;
-        align-self: center;
-        margin-left: 40%;
-		margin-top: 5%;
-        color: #ffffff;      
+a{
+        background: #1a1a1a;
+        /*padding: 0.8%;*/
+        /*margin: 28%;*/
+        color: white;
+        text-decoration: none;
 }
 #anon{
-        background-color: #000000;
-        width: 40%;
-        height: 25%;
-        align-self: center;
-        margin-left: 10%;
-        color: #ffffff;      
-		margin-top: 10%;
-		margin-bottom: 0.7%;
-        
+        margin-top: 110%;
+        margin-left: 20%;
+        padding: 2.5%;
 }
 #login{
-        background-color: #000000;
-        width: 40%;
-        height: 25%;
-        align-self: center;
-        /*margin-left: 10%;*/
-        color: #ffffff;       
-        
+        margin-left: 30%;
+        padding: 2.7%;
 }
-        height: 25%;
-        align-self: center;
-        margin-left: 10%;
-        color: #ffffff;       
-        
-} */
-
-#container{
-        background-color: #111111;
-        color: #ffffff;
-        width: 100%;
-        height: 80%;
-        
-        left: 50%;
-        
-}
-#Title{
-        align-self: center;
-        font-size: 300%;
-        margin-left: 34%;
-        padding-top: 5%;
-}
-
-/*hr {
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-*/
-#brReplacement{
-        height: 0.9%;
-}
-#hr1{
-        animation-delay:0.16s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr2{
-        animation-delay:0.32s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr3{
-        animation-delay:0.48s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr4{
-        animation-delay:0.64s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}       
-#hr5{
-        animation-delay:0.8s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr6{
-        animation-delay:1s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#dms{
-	    background-color: #000000;
-        width: 20%;
-        height: 10%;
-        align-self: center;
-        margin-left: 40%;
-		margin-top: 5%;
-        color: #ffffff;      
-}
-#anon{
-        background-color: #000000;
-        width: 40%;
-        height: 25%;
-        align-self: center;
-        margin-left: 10%;
-        color: #ffffff;       
-        
-}
-#login{
-        background-color: #000000;
-        width: 40%;
-        height: 25%;
-        align-self: center;
-        /*margin-left: 10%;*/
-        color: #ffffff;       
-        
-}
-        height: 25%;
-        align-self: center;
-        margin-left: 10%;
-        color: #ffffff;       
-        
+#dm{
+        margin-left: 100%;
+        display: block;
+        margin-top: 50%;
 }
 #container{
         background-color: #111111;
@@ -300,69 +69,19 @@ body{
         padding-top: 5%;
 }
 
-/*hr {
+hr {
+        /*height: 0.09%;*/
+        color:darkorchid;
         animation-name: lineAnim;
-        animation-duration: 1;
+        animation-duration: 1000ms;
         animation-iteration-count: infinite;
         
-        height: 5px;
-        border: 0px;
 }
-*/
-#brReplacement{
-        height: 0.9%;
+
+#idfk{
+        height: 0.72%;
 }
-#hr1{
-        animation-delay:0.16s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
+#idk{
+        height: 7%;
 }
-#hr2{
-        animation-delay:0.32s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr3{
-        animation-delay:0.48s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr4{
-        animation-delay:0.64s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}       
-#hr5{
-        animation-delay:0.8s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
-#hr6{
-        animation-delay:1s;
-        animation-name: lineAnim;
-        animation-duration: 1;
-        animation-iteration-count: infinite;
-        
-        height: 5px;
-        border: 0px;
-}
+
