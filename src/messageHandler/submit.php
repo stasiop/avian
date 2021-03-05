@@ -7,11 +7,11 @@
 		//$fileName="id.txt";
 		//echo readfile("id.txt");
 		//echo readfile("GODFUCKPHP.txt");
-		$idFileRead=fopen("WouldntItBeNiceToDie.txt","r+");
-		$idContents=readfile("WouldntItBeNiceToDie.txt");
+		$idFileRead=fopen("d.txt","r+");
+		$idContents=readfile("d.txt");
 		echo "GodFuckHereGoesInt";
 		//(int)readfile("WouldntItBeNiceToDie.txt");
-		$idInt=(int)file_get_contents("WouldntItBeNiceToDie.txt");
+		$idInt=(int)file_get_contents("id.txt");
 		echo $idInt;
 
 		//echo $idContents;
@@ -23,7 +23,7 @@
 		echo "After +1 Has Been Applied";
 		echo (string) $idInt;
 		echo gettype((string) $idInt);
-		$idFile=fopen("WouldntItBeNiceToDie.txt","w+");
+		$idFile=fopen("d.txt","w+");
 		fwrite($idFile,(string)$idInt);
 		
 		fclose($idFile);
