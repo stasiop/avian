@@ -35,7 +35,7 @@
 		//echo $id;
 		//fwrite($idFile,$id);
 		//fclose($idFile);
-		if (isset($_COOKIE['User'])) {
+		if (isset($_COOKIE['user'])) {
 			$ufname = $_COOKIE["user"];
 			$sfname = base64_decode($ufname);
 			$name = substr($sfname, 0, -5);	
