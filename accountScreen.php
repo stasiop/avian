@@ -5,30 +5,25 @@ if(!isset($_COOKIE["user"])) {
 	setcookie($cookie_name, $cookie_value, time() + (86400 * 365), "/"); // 86400 = 1 day
 }
 ?>
-<style>
-body {
-  background-color: #545454;
-}
-table {
-	background-color: white;
-}
-p {
-	margin-right: 0%;
-	border: 10px;
-	color: white;
-}
-</style>
-<table border="1" class="table">
-    <tr>
-        <td><a href="/anonchat.php">anonchat</a></td>
-		<td><a href="/src/dm/dm_generator.php">generate DM</a></td>
-		<td><a href="/src/dm/dm_delete.php">delete my DM</a></td>
-    </tr>
-</table>
+
+
+   <link type="text/css" rel="stylesheet" href="Stylesheet2.css">
+                        
+        <a href="/anonchat.php" id="anon">Global Chat</a>
+
+<div id="spaceHog"></div>
 <form method="POST" action="/src/dm/dm_finder.php">
-	<input name="DMnum" placeholder="12345" type="text">
-	<button type="submit" value="submit">go to dm</button>
+<div id="inputBorder">	
+
+	
+	<input name="DMnum" placeholder="12345" type="text" id="dmNameInput">
+	<button type="submit" value="submit" id="dmNameSubmit">Go To DM</button>
+	</div>
+
 </form>
-<p>
+<div id="spaceHog"></div>
+<a href="/src/dm/dm_generator.php" id="generate">Create a DM</a>
+		<a href="/src/dm/dm_delete.php" id="delete">Remove a DM</a>
+<p id="info">
 This is the home of the Direct Messaging system designed by stan, it is currently very insecure.<br>Use at your own risk.
 </p>
