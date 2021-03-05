@@ -38,7 +38,7 @@
 		if (isset($_COOKIE['user'])) {
 			$ufname = $_COOKIE["user"];
 			$sfname = base64_decode($ufname);
-			$name = substr($sfname, 0, -5);	
+			$name = substr($sfname, 0, -6);	
 		} else {
 			$name = "Anon";
 		}
