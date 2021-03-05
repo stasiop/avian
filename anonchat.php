@@ -4,7 +4,7 @@
         <body onload="Autoscroll();">
                 <div>
                         <link type="text/css" rel="stylesheet" href="Stylesheet.css">
-                        <img class="direction" src="/src/images/anon chat neon.png" width="320" height="200">
+                        
                         <div class="textContainer">	
                                 <script type="text/javascript">   
                                 function getCookie(cname) {
