@@ -11,7 +11,7 @@ if(isset($_POST["submit"])) {
     $uploadOk = 1;
   } else {
     echo "File is not an image.";
-    $uploadOk = 0;
+    $uploadOk = 0; // stan why is this not a bool
   }
 if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
@@ -33,7 +33,9 @@ if ($uploadOk == 0) {
 		fwrite($idFile,(string)$idInt);
 		fclose($idFile);
 		if (isset($_COOKIE['user'])) {
-			$name = "Anon (" . $_COOKIE['user'] . ")";
+			$ufname = $_COOKIE["user"];
+			$sfname = base64_decode($ufname);
+			$name = substr($sfname, 0, -6);	#0000
 		} else {
 			$name = "Anon";
 		}
