@@ -25,7 +25,7 @@
 		$username = $lines[$line_number];
 		if ($password == $hopefullyp){
 			$Eusername = base64_encode($username);
-			setcookie("user", $Eusername);
+			setcookie("pamuser", $Eusername);
 			header("location: /accountScreen.php");
 		} else {
 			echo "<a> incorrect password please </a> <a href=/src/PAM/PAMver10.php>retry </a> <a>or </a> <a href=PAMregister/PAMRver10.php>register </a> <a>an account </a> ";
