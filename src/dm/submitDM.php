@@ -3,7 +3,7 @@ session_start();
 $name = $_COOKIE['user'];
 $data_file = fopen($_SESSION['DMnum'] . ".html", "a+");
 $message = $_POST["message"];
-$text_to_write = $name . ": " . $message . "\n";
+$text_to_write = $name . ": " . $message . "<br>";
 fwrite($data_file, $text_to_write);
 fclose($data_file);
 header('Location: dm_finder.php');
