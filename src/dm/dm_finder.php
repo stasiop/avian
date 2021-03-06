@@ -5,8 +5,8 @@ if (isset($_POST['DMnum'])) {
 	$dmnum = $_SESSION['DMnum'];
 }
 if (!isset($_SESSION['DMnum'])) {
-	$_SESSION['DMnum'] = $_COOKIE['user'];
-	$dmnum = $_SESSION['DMnum'];
+	if (isset($_COOKIE['pamuser'])){ $_SESSION['DMnum'] = $_COOKIE['pamuser']; $dmnum = $_SESSION['DMnum'];} 
+	elseif (isset($_COOKIE['user'])){ $_SESSION['DMnum'] = $_COOKIE['user']; $dmnum = $_SESSION['DMnum'];}
 }
 ?>
 <title>DM | #<?php echo $_SESSION['DMnum'] ?></title>
