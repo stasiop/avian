@@ -40,7 +40,8 @@
 			$sfname = base64_decode($ufname);
 			$name = substr($sfname, 0, -6);	#0000
 		} elseif (isset($_COOKIE['user'])) { //what the fuck did you do??? are you aware that the cookie user is also set at accountScreen if not at PAM? it can try to decode a string of rndm numbers.
-			$name = $_COOKIE['user'];
+			//$name = $_COOKIE['user'];
+			$name="Anon";
 		} else {
 			$name = "Anon";
 		}
