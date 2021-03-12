@@ -49,9 +49,15 @@
                                         const task = async () => {
                                                 
                                                 while(x) {
-                                                        if (iframeCW.document) iframeCW = iframeCW.document;
-                                                        iframeCW.body.style.color = "white";
+                                                        var iframeCW = document.getElementById('GFG');
+                                                        if(iframeCW!=null){
+                                                                if (iframeCW.document){
+                                                                iframeCW = iframeCW.document;
+                                                                iframeCW.body.style.color = "white";
                                                         }
+                                                        }
+                                                        
+                                                        
                                                         //fuck i hate my fucking life
                                                         await new Promise(r => setTimeout(r, 1000));
                                                         
@@ -61,6 +67,7 @@
                                                         console.log("serverID "+serverID)
                                                         console.log("clientID "+clientId)
                                                         if(!window.asdf){
+                                                                document.getElementById('GFG').contentWindow.document.body.style.color='white';
                                                                 if(!window.zvcx){
                                                                         if(serverID!=clientId){
                                                                         console.log("DifferentIDS");
