@@ -4,7 +4,7 @@
         <body onload="Autoscroll();">
                 <div>
                         <link type="text/css" rel="stylesheet" href="css/Stylesheet.css">
-                        
+			<link rel="icon" type="image/jpg" href="/src/images/avian.jpg"/>
                         <div class="textContainer">	
                                 <script type="text/javascript">   
                                 function getCookie(cname) {
