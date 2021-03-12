@@ -1,3 +1,4 @@
+<link rel="icon" type="image/jpg" href="/src/images/avian.jpg"/>
 <?php
 if(!isset($_COOKIE["user"])) {
 	$cookie_name = "user";
