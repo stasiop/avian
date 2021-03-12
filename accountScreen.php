@@ -7,7 +7,7 @@ if(!isset($_COOKIE["user"])) {
 ?>
 
 
-   <link type="text/css" rel="stylesheet" href="Stylesheet2.css">
+   <link type="text/css" rel="stylesheet" href="css/Stylesheet2.css">
                         
         <a href="/anonchat.php" id="anon">Global Chat</a>
 
