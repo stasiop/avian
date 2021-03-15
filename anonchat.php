@@ -3,8 +3,8 @@
         <title>AnonChat</title>
         <body onload="Autoscroll();">
                 <div>
-                        <link type="text/css" rel="stylesheet" href="css/Stylesheet.css">
-			<link rel="icon" type="image/jpg" href="/src/images/avian.jpg"/>
+                        <link type="text/css" rel="stylesheet" href="Stylesheet.css">
+                        
                         <div class="textContainer">	
                                 <script type="text/javascript">   
                                 function getCookie(cname) {
@@ -24,8 +24,8 @@
                                                 return "";
                                         }     
                                         window.qwer=true;
-                                        window.asdf=true;
-                                        window.zxcv=true;
+                                        window.firstFrameOfWindow=true;
+                                        window.secondFrameOfWindow=true;
                                         if(window.qwer){
                                                 var serverID=0;
                                                 var clientId=0;
@@ -34,7 +34,7 @@
                                                 window.qwer=false;
                                         }
                                         
-                                        window.asdf=true;
+                                        window.firstFrameOfWindow=true;
                                         function loadDoc() {
                                                 console.log("Loaded Document")
                                                 var xhttp = new XMLHttpRequest();
@@ -66,7 +66,7 @@
                                                         
                                                         console.log("serverID "+serverID)
                                                         console.log("clientID "+clientId)
-                                                        if(!window.asdf){
+                                                        if(!window.firstFrameOfWindow){
                                                                 document.getElementById('GFG').contentWindow.document.body.style.color='white';
                                                                 if(!window.zvcx){
                                                                         if(serverID!=clientId){
@@ -77,12 +77,12 @@
                                                                         clientId=serverID;
                                                                         }
                                                                 }else{
-                                                                        window.zxcv=false;
+                                                                        window.secondFrameOfWindow=false;
                                                                 }
                                                                 
                                                         
                                                         }else{
-                                                                window.asdf=false;
+                                                                window.firstFrameOfWindow=false;
                                                         }
                                                         
                                                         
