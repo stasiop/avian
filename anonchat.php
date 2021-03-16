@@ -52,7 +52,6 @@
                                                         
                                                         
                                                         
-                                                        
                                                         //fuck i hate my fucking life
                                                         await new Promise(r => setTimeout(r, 1000));
                                                         
@@ -73,12 +72,13 @@
                                                                         }
                                                                 }else{
                                                                         window.secondFrameOfWindow=false;
-									var iframeCW = document.getElementById('GFG');
-									if(iframeCW!=null){
-										if (iframeCW.document){
-											iframeCW = iframeCW.document;
-											iframeCW.body.style.color = "white";
-                                                        		}
+                                                                        var iframeCW = document.getElementById('GFG');
+                                                                        if(iframeCW!=null){
+                                                                                if (iframeCW.document){
+                                                                                iframeCW = iframeCW.document;
+                                                                                iframeCW.body.style.color = "white";
+                                                                        }
+                                                        }
                                                                 }
                                                                 
                                                         
