@@ -17,7 +17,7 @@ a{
     
 }
 #anon{
-    margin-left: 26%;
+    margin-left: 30%;
     padding: 2%;
 }
 #login{
@@ -27,10 +27,8 @@ a{
     padding-top: 4%;
 }
 #dms{
-    align-self: center;
-    margin-left: 45%;
-    padding-left: 4%;
-    padding-top: 4%;
+    margin-top: 10%;
+    margin-left: 42%;
 }
 #idfk{
     height: 2.4%;
