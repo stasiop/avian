@@ -49,13 +49,8 @@
                                         const task = async () => {
                                                 
                                                 while(x) {
-                                                        var iframeCW = document.getElementById('GFG');
-                                                        if(iframeCW!=null){
-                                                                if (iframeCW.document){
-                                                                iframeCW = iframeCW.document;
-                                                                iframeCW.body.style.color = "white";
-                                                        }
-                                                        }
+                                                        
+                                                        
                                                         
                                                         
                                                         //fuck i hate my fucking life
@@ -78,6 +73,12 @@
                                                                         }
                                                                 }else{
                                                                         window.secondFrameOfWindow=false;
+									var iframeCW = document.getElementById('GFG');
+									if(iframeCW!=null){
+										if (iframeCW.document){
+											iframeCW = iframeCW.document;
+											iframeCW.body.style.color = "white";
+                                                        		}
                                                                 }
                                                                 
                                                         
