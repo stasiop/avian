@@ -24,6 +24,7 @@ if(!isset($_COOKIE["user"]) && !isset($_COOKIE["pamuser"])) {
                 ";
                 fwrite($myfile, $txt);
                 fclose($myfile);
+                chown($user . ".html", "www-data");
         }
 }
 $_SESSION["bdm"] = $user;
