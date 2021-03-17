@@ -30,7 +30,7 @@ if ($uploadOk == 0) {
 			$name = "Anon";
 		}
 		$data_file = fopen("../dm/" . $_SESSION['DMnum'] . ".html", "a+");
-		$text_to_write = $name . ':<br> <img src="/src/messageHandler/uploads/' . basename($_FILES["fileToUpload"]["name"]) . '">';
+		$text_to_write = "<br>" . $name . ':<br> <img src="/src/messageHandler/uploads/' . basename($_FILES["fileToUpload"]["name"]) . '">';
 		fwrite($data_file, $text_to_write);
 		fclose($data_file);
 		header('Location: /src/dm/dm_finder.php');
