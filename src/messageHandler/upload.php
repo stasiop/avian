@@ -1,6 +1,7 @@
 <?php
 $target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$renamefileto = rand(0,2738912);
+$target_file = $target_dir . $renamefileto;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
@@ -40,7 +41,7 @@ if ($uploadOk == 0) {
 			$name = "Anon";
 		}
 		$data_file = fopen("message.html", "a+");
-		$text_to_write = "<br>" . $name . ':<br> <img src="/src/messageHandler/uploads/' . basename($_FILES["fileToUpload"]["name"]) . '">';
+		$text_to_write = "<br>" . $name . ':<br> <img src="/src/messageHandler/uploads/' . $renamefileto . '">';
 		fwrite($data_file, $text_to_write);
 		fclose($data_file);
 		header('Location: /anonchat.php');
