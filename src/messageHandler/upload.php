@@ -40,7 +40,7 @@ if ($uploadOk == 0) {
 			$name = "Anon";
 		}
 		$data_file = fopen("message.html", "a+");
-		$text_to_write = "<br>" . $name . ': <img src="/src/messageHandler/uploads/' . basename($_FILES["fileToUpload"]["name"]) . '" width="50%" height="50%">';
+		$text_to_write = "<br>" . $name . ': <img src="/src/messageHandler/uploads/' . basename($_FILES["fileToUpload"]["name"]) . '">';
 		fwrite($data_file, $text_to_write);
 		fclose($data_file);
 		header('Location: /anonchat.php');
