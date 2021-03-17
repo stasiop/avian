@@ -11,7 +11,18 @@ if(!isset($_COOKIE["user"]) && !isset($_COOKIE["pamuser"])) {
                 echo "doesn't exist (";
                 echo $user . ".html)\n";
                 $myfile = fopen($user . ".html", "a+") or die("\nUnable to create file!");
-                $txt = "";
+                $txt = "<style>
+                img {
+                max-width:250px;
+                max-height:250px;
+                vertical-align: baseline;
+                }
+                img:hover {
+                max-width:500px;
+                max-height:500px;
+                }
+                </style>
+                ";
                 fwrite($myfile, $txt);
                 fclose($myfile);
         }
