@@ -15,7 +15,6 @@ if(!isset($_COOKIE["user"]) && !isset($_COOKIE["pamuser"])) {
                 img {
                 max-width:250px;
                 max-height:250px;
-                vertical-align: baseline;
                 }
                 img:hover {
                 max-width:500px;
