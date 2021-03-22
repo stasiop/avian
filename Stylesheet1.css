@@ -1,3 +1,35 @@
+@keyframes follow{
+    0%{
+        background: linear-gradient(to right, rgb(255, 55, 222),rgb(77, 0, 219));
+
+    }12.5%{
+        background:linear-gradient(to right , rgb(211,42,229 ) , rgb(122,14,218)); 
+    }
+    25%{
+        background:linear-gradient(to right, rgb(166,28,217) , rgb(166,28,217)); 
+    }
+    37.5%{
+        background: linear-gradient(15deg, rgb(122,14,218) , rgb(211,42,220)); ;
+    }
+    50%{
+
+        background:linear-gradient(to right, rgb(77, 0, 219) , rgb(255, 55, 222)); 
+    }
+    62.5%{
+        background: linear-gradient(to right, rgb(122,14,218) , rgb(211,42,220)); ;
+    }
+    75%{
+        background:linear-gradient(to right, rgb(166,28,217) , rgb(166,28,217)); 
+    }
+    87.5%{
+        background:linear-gradient(to right,rgb(211,42,229   , rgb(122,14,218))); 
+    }
+    100%{
+
+        background: linear-gradient(to right, rgb(255, 55, 222),rgb(77, 0, 219));
+    }
+
+}
 body{
     background-color: #222;
     font-family: 'Courier New', Courier, monospace;
@@ -8,32 +40,57 @@ body{
 
 }
 #Title{
-    margin-left: 32%;
+    margin-left: 34%;
     color: white;
     font-size: 350%;
 }
 a{
     background-color: #212121;
-    
+    text-decoration: none;
+    color:white;  
+    padding:1%;
+}
+a:hover{
+    background-color: #333;
 }
 #anon{
-    margin-left: 30%;
-    padding: 2%;
+  
+    margin-left: 16%;
+    font-size: 250%;
+    border: black ;
+    border-style: solid ;
 }
 #login{
+    text-align:center;
     align-self: center;
+
     margin-left: 26%;
-    padding-left: 4%;
-    padding-top: 4%;
+    
+    font-size: 250%;
+    border: black ;
+    border-style: solid ;
 }
 #dms{
     margin-top: 10%;
-    margin-left: 42%;
+    margin-left: 46%;
+    
+    font-size: 250%;
+    border: black ;
+    border-style: solid ;
+    
+}
+#dms::after{
+    padding:none;
 }
 #idfk{
-    height: 2.4%;
+    height: 2.1%;
     
 }
 hr{
-    color:purple;
+    animation-name: follow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /*background:linear-gradient(to right, rgb(255, 55, 222) , rgb(77, 0, 219)); */
+    height: 5px;
+    border: none;
 }
