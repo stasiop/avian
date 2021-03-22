@@ -8,32 +8,54 @@ body{
 
 }
 #Title{
-    margin-left: 32%;
+    margin-left: 34%;
     color: white;
     font-size: 350%;
 }
 a{
     background-color: #212121;
-    
+    text-decoration: none;
+    color:white;  
+    padding:1%;
+}
+a:hover{
+    background-color: #333;
 }
 #anon{
-    margin-left: 30%;
-    padding: 2%;
+  
+    margin-left: 17%;
+    font-size: 250%;
+    border: black ;
+    border-style: solid ;
 }
 #login{
+    text-align:center;
     align-self: center;
+
     margin-left: 26%;
-    padding-left: 4%;
-    padding-top: 4%;
+    
+    font-size: 250%;
+    border: black ;
+    border-style: solid ;
 }
 #dms{
     margin-top: 10%;
     margin-left: 44%;
+    
+    font-size: 250%;
+    border: black ;
+    border-style: solid ;
+    
+}
+#dms::after{
+    padding:none;
 }
 #idfk{
-    height: 2.4%;
+    height: 2.1%;
     
 }
 hr{
-    color:purple;
+    background: linear-gradient(to right, rgb(255, 55, 222),rgb(77, 0, 219));
+    height: 5px;
+    border: none;
 }
