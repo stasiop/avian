@@ -17,6 +17,5 @@ Updated DM system
 <br>
 More account customisation<br>
 # Licensing
-Avian is Free Software Lisenced Under The AGPLv3
-<br>
+Avian is Free Software licensed under the GNU Affero Public Licence <br>
 <img src="https://www.gnu.org/graphics/agplv3-with-text-162x68.png">
