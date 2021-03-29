@@ -1,5 +1,5 @@
 # AVIAN
-We are not responsible for anything that may happen if you use avian, e.g, you turn into stan (scary)
+We are not responsible for anything that may happen if you use avian, e.g, you turn into amogus
 <br>
 please don't sue us
 <br>
