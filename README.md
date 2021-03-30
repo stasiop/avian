@@ -21,4 +21,4 @@ Decentralisation <br>
 some sort of P2P would be cool
 # Licensing
 Avian is Free Software licensed under the GNU Affero Public Licence v3 <br>
-<img src="https://www.gnu.org/graphics/agplv3-with-text-162x68.png"><br>the person above me is a doo doo head
+<img src="https://www.gnu.org/graphics/agplv3-with-text-162x68.png">
