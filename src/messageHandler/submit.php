@@ -46,14 +46,19 @@
 			$name = "Anon";
 		}
 
-		if(strlen($message)<250){
+                if(strlen($message)<250){
               if(empty(explode(">", $message)) == false){
                   $text_quoted=explode(">", $message);
-                  $text_quoted[2]="<b>>" . $text_quoted[2] . "</b>";
+                  if(isset($text_quoted[1])){
+                  $text_quoted[1]="<b>>" . $text_quoted[1] . "</b>";
+                  } else {$text_quoted[1]="<b>" . $text_quoted[1] . "</b>";}
+                  $message = $textquoted[0] . $text_quoted[1];
               }
-		$text_to_write = "<br>" . $name . ": " . $message . $text_quoted[1] . $text_quoted[2];
-		fwrite($data_file, $text_to_write);
-		}
-		fclose($data_file);
-		header('Location: /anonchat.php');
+                $text_to_write = "<br>" . $name . ": " . $text_quoted[0] . $text_quoted[1];
+                fwrite($data_file, $text_to_write);
+                echo "\n" . $message;
+                }
+                fclose($data_file);
+                header('Location: /anonchat.php');
+
 ?>
