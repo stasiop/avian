@@ -50,8 +50,8 @@
 		if(strlen($text_to_write)<250){
               if(empty(explode(">", $text_to_write)) == false){
               $text_quoted=explode(">", $text_to_write);
-              $text_quoted[2]="<br>><b>" . $text_quoted[2] . "</b>";
-              $text_to_write=$text_quoted[1] . $text_quoted[2];
+              $text_quoted[2]="<b>>" . $text_quoted[2] . "</b>";
+              $text_to_write="<br>" . $text_quoted[1] . $text_quoted[2];
               }
 		fwrite($data_file, $text_to_write);
 		}
