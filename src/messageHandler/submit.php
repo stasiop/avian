@@ -46,9 +46,9 @@
 			$name = "Anon";
 		}
 
-		if(strlen($text_to_write)<250){
-              if(empty(explode(">", $text_to_write)) == false){
-                  $text_quoted=explode(">", $text_to_write);
+		if(strlen($message)<250){
+              if(empty(explode(">", $message)) == false){
+                  $text_quoted=explode(">", $message);
                   $text_quoted[2]="<b>>" . $text_quoted[2] . "</b>";
                   $message="<br>" . $text_quoted[1] . $text_quoted[2];
               }
