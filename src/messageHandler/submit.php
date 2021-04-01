@@ -50,9 +50,8 @@
               if(empty(explode(">", $message)) == false){
                   $text_quoted=explode(">", $message);
                   $text_quoted[2]="<b>>" . $text_quoted[2] . "</b>";
-                  $message="<br>" . $text_quoted[1] . $text_quoted[2];
               }
-		$text_to_write = $name . ": " . $message;
+		$text_to_write = "<br>" . $name . ": " . $message . $text_quoted[1] . $text_quoted[2];
 		fwrite($data_file, $text_to_write);
 		}
 		fclose($data_file);
