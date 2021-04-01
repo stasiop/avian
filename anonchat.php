@@ -68,6 +68,7 @@
                                                                         var iframe = document.getElementById('GFG');
                                                                         iframe.src = iframe.src;
                                                                         document.getElementById('GFG').contentWindow.document.body.style.color='white';
+									Autoscroll();
                                                                         clientId=serverID;
                                                                         }
                                                                 }else{
@@ -107,6 +108,7 @@
                                 document.getElementById('GFG').onload = function(){ setTimeout("document.getElementById('GFG').contentWindow.scrollTo(0, 99999999)", 1) }
                                 if (iframeCW.document) iframeCW = iframeCW.document;
                                 iframeCW.body.style.color = "white";
+				document.getElementById("GFG").src = "/src/messageHandler/message.html"; // WHAT THE FUCK IS THIS SHIT IF THIS FIXED I WILL TEAR MY BALLS OFF, FUCK YOU FIREFOX
                                 }
                            </script>
                            <script>
