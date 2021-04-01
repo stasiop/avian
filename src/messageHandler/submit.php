@@ -46,7 +46,6 @@
 			$name = "Anon";
 		}
 
-		$text_to_write = "<br>" . $name . ": " . $message;
 		if(strlen($text_to_write)<250){
               if(empty(explode(">", $text_to_write)) == false){
                   $text_quoted=explode(">", $text_to_write);
