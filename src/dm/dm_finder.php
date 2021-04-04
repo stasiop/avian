@@ -12,7 +12,7 @@ if (!isset($_SESSION['DMnum'])) {
 }
 ?>
 <title>DM | #<?php echo $_SESSION['DMnum'] ?></title>
-<link type="text/css" rel="stylesheet" href="/Stylesheet.css">
+<link type="text/css" rel="stylesheet" href="/css/Stylesheet.css">
 <body onload="Autoscroll();">
 <h2>#<?php echo $_SESSION['DMnum'] ?></h2>
 <div class="textContainer">
