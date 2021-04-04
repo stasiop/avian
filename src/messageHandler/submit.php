@@ -54,7 +54,7 @@
                   } else {$text_quoted[1]="<b>" . $text_quoted[1] . "</b>";}
                   $message = $textquoted[0] . $text_quoted[1];
               }
-                $text_to_write = "<br>" . $name . ": " . $text_quoted[0] . $text_quoted[1];
+                $text_to_write = "</b><br>" . $name . ": " . $text_quoted[0] . $text_quoted[1];
                 fwrite($data_file, $text_to_write);
                 echo "\n" . $message;
                 }
