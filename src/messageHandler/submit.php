@@ -50,7 +50,7 @@
               if(empty(explode(">", $message)) == false){
                   $text_quoted=explode(">", $message);
                   if(isset($text_quoted[1])){
-                  $text_quoted[1]="<b class="quote">>" . $text_quoted[1] . "</b>";
+                  $text_quoted[1]='<b class="quote">>' . $text_quoted[1] . "</b>";
                   } else {$text_quoted[1]="<b>" . $text_quoted[1] . "</b>";}
                   $message = $textquoted[0] . $text_quoted[1];
               }
