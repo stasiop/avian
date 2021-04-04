@@ -3,7 +3,7 @@
         <title>AnonChat</title>
         <body onload="Autoscroll();">
                 <div>
-                        <link type="text/css" rel="stylesheet" href="Stylesheet.css">
+                        <link type="text/css" rel="stylesheet" href="/css/Stylesheet.css">
                         
                         <div class="textContainer">	
                                 <script type="text/javascript">   
