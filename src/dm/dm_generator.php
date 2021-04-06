@@ -12,6 +12,9 @@ if(!isset($_COOKIE["user"]) && !isset($_COOKIE["pamuser"])) {
                 echo $user . ".html)\n";
                 $myfile = fopen($user . ".html", "a+") or die("\nUnable to create file!");
                 $txt = "<style>
+                * {
+                color: white;
+                }
                 img {
                 max-width:250px;
                 max-height:250px;
@@ -19,6 +22,9 @@ if(!isset($_COOKIE["user"]) && !isset($_COOKIE["pamuser"])) {
                 img:hover {
                 max-width:500px;
                 max-height:500px;
+                }
+                .quote {
+                color:lime;
                 }
                 </style>
                 ";
