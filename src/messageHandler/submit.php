@@ -51,6 +51,7 @@
                 if(strlen($message)<250){
 		if(empty(explode("<script", $message)) == false){
 			echo "<h1>Hey asshole</h1><br><hr><p>We found a fucking script tag, fuck you</p>"
+			$message="I am an asshole"
               }
               if(empty(explode(">", $message)) == false){
                   $text_quoted=explode(">", $message);
