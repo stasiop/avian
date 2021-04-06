@@ -61,7 +61,7 @@
                   $message = $textquoted[0] . $text_quoted[1];
 		  if(empty(explode("[/quote]", $message)) == false){
 		  $textquoted = explode("[/quote]", $message);
-		  $message = $textquouted[0] . '</b>' $textquoted[1];
+		  $message = $textquoted[0] . '</b>' $textquoted[1];
 		  } else {
 	          $message = $message . '<br>';
 		  }
