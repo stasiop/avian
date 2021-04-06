@@ -19,15 +19,6 @@
 		//$idInt=(int)$idContents;
 		//echo $idInt;
 		$idInt++;
-		fclose($idFileRead);
-		echo "After +1 Has Been Applied";
-		echo (string) $idInt;
-		echo gettype((string) $idInt);
-		$idFile=fopen("WouldntItBeNiceToDie.txt","w+");
-		fwrite($idFile,(string)$idInt);
-		
-		fclose($idFile);
-		
 		//echo file_get_contents("WouldntItBeNiceToDie.txt");
 		//$id=(int)$idFile;
 		//echo $id;
@@ -68,8 +59,17 @@
                 }
                 $text_to_write = "<br>" . $name . ": " . $message;
                 fwrite($data_file, $text_to_write);
-                echo "\n" . $message;
+                echo "\n" . $message;		
+		fclose($idFileRead);
+		echo "After +1 Has Been Applied";
+		echo (string) $idInt;
+		echo gettype((string) $idInt);
+		$idFile=fopen("WouldntItBeNiceToDie.txt","w+");
+		fwrite($idFile,(string)$idInt);
+		
+		fclose($idFile);
                 fclose($data_file);
+		
                 header('Location: /anonchat.php');
                 }
                 }
