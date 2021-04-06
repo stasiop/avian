@@ -45,14 +45,14 @@
 		} else {
 			$name = "Anon";
 		}
-		if(strpos($message, "><br>") !== false){
-		$message="I tried to turn the whole chat green";
-		}
                 if(strlen($message)<250){
-		if(empty(explode("<script", $message)) == false){
+		if(strpos($message, "<script")) !== false){
 			echo "<h1>Hey asshole</h1><br><hr><p>We found a fucking script tag, fuck you</p>"
 			$message="I am an asshole"
               }
+		if(strpos($message, "><br>") !== false){
+		$message="I tried to turn the whole chat green";
+		}
               if(empty(explode(">", $message)) == false){
                   $text_quoted=explode(">", $message);
                   if(isset($text_quoted[1])){
