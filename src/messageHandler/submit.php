@@ -59,7 +59,7 @@
                 $message = $textquoted[0] . '<br>    ' . $textquoted[1];
                 }
 		}
-                $text_to_write = "<br>" . $name . ": " . $message;
+                $text_to_write = $name . ": " . $message;
                 fwrite($data_file, $text_to_write);
                 echo "\n" . $message;		
 		fclose($idFileRead);
