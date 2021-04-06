@@ -46,31 +46,32 @@
 			$name = "Anon";
 		}
                 if(strlen($message)<250){
-		if(strpos($message, "<script") !== false){
-			echo "<h1>Hey asshole</h1><br><hr><p>We found a fucking script tag, fuck you</p>";
-			$message="I am an asshole";
-                }
-		if(strpos($message, "><br>") !== false){
-		$message="I tried to turn the whole chat green";
-		}
-              if(empty(explode("[quote]", $message)) == false){
-                  $text_quoted=explode("[quote]", $message);
+                if(strpos($message, "<") !== false){
+                        echo "<h1>Dissallowed character</h1><br><hr><p>The character "<" is illegal due to exploits, for alternatives look at<br>our formatting help, thank you</p>";
+                } else {
+              if(empty(explode("(quote)", $message)) == false){
+                  $text_quoted=explode("(quote)", $message);
                   if(isset($text_quoted[1])){
                   $text_quoted[1]='<b class="quote">>' . $text_quoted[1];
                   } else {$text_quoted[1]="<b>" . $text_quoted[1];}
                   $message = $text_quoted[0] . $text_quoted[1];
-		  if(empty(explode("[/quote]", $message)) == false){
-		  $textquoted = explode("[/quote]", $message);
-		  $message = $textquoted[0] . '</b>' $textquoted[1];
-		  } else {
-	          $message = $message . '<br>';
-		  }
+                  if(empty(explode("(/quote)", $message)) == false){
+                  $textquoted = explode("(/quote)", $message);
+                  $message = $textquoted[0] . '</b>  ' . $textquoted[1];
+                  } else {
+                  $message = $message . '</b>';
+                  }
               }
+                if (empty(explode("(br)", $message)) == false){
+                $textquoted = explode("(br)", $message);
+                $message = $textquoted[0] . '<br>    ' . $textquoted[1];
+                }
                 $text_to_write = "<br>" . $name . ": " . $message;
                 fwrite($data_file, $text_to_write);
                 echo "\n" . $message;
-                }
                 fclose($data_file);
                 header('Location: /anonchat.php');
+                }
+                }
 
 ?>
