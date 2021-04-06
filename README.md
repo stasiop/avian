@@ -22,5 +22,5 @@ some sort of P2P would be cool
 # Licensing
 Avian is Free Software licensed under the [GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.html) <br>
 <img src="https://www.gnu.org/graphics/agplv3-with-text-162x68.png">
-
+d
 im tollat fdwa
