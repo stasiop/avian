@@ -53,14 +53,20 @@
 		if(strpos($message, "><br>") !== false){
 		$message="I tried to turn the whole chat green";
 		}
-              if(empty(explode(">", $message)) == false){
-                  $text_quoted=explode(">", $message);
+              if(empty(explode("[quote]", $message)) == false){
+                  $text_quoted=explode("[quote]", $message);
                   if(isset($text_quoted[1])){
-                  $text_quoted[1]='<b class="quote">>' . $text_quoted[1] . "</b>";
-                  } else {$text_quoted[1]="<b>" . $text_quoted[1] . "</b>";}
+                  $text_quoted[1]='<b class="quote">>' . $text_quoted[1];
+                  } else {$text_quoted[1]="<b>" . $text_quoted[1];}
                   $message = $textquoted[0] . $text_quoted[1];
+		  if(empty(explode("[/quote]", $message)) == false){
+		  $textquoted = explode("[/quote]", $message);
+		  $message = $textquouted[0] . '</b>' $textquoted[1];
+		  } else {
+	          $message = $message . '<br>';
+		  }
               }
-                $text_to_write = "<br>" . $name . ": " . $text_quoted[0] . $text_quoted[1];
+                $text_to_write = "<br>" . $name . ": " . $message
                 fwrite($data_file, $text_to_write);
                 echo "\n" . $message;
                 }
