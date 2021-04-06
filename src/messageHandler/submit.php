@@ -58,7 +58,7 @@
                   if(isset($text_quoted[1])){
                   $text_quoted[1]='<b class="quote">>' . $text_quoted[1];
                   } else {$text_quoted[1]="<b>" . $text_quoted[1];}
-                  $message = $textquoted[0] . $text_quoted[1];
+                  $message = $text_quoted[0] . $text_quoted[1];
 		  if(empty(explode("[/quote]", $message)) == false){
 		  $textquoted = explode("[/quote]", $message);
 		  $message = $textquoted[0] . '</b>' $textquoted[1];
@@ -66,7 +66,7 @@
 	          $message = $message . '<br>';
 		  }
               }
-                $text_to_write = "<br>" . $name . ": " . $message
+                $text_to_write = "<br>" . $name . ": " . $message;
                 fwrite($data_file, $text_to_write);
                 echo "\n" . $message;
                 }
