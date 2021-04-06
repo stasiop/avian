@@ -119,6 +119,7 @@
                                 <input name="message" placeholder="Isn't avian so pog?!" type="text">
                                 <button type="submit" value="submit">Send</button>
                         </form>
+			<a href="/src/misc/formatHelp.html">Formatting Help</a>
                         <form action="/src/messageHandler/upload.php" method="post" enctype="multipart/form-data">
 							  Select image to upload:
 							  <input type="file" name="fileToUpload" id="fileToUpload">
