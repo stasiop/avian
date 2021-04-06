@@ -46,9 +46,9 @@
 			$name = "Anon";
 		}
                 if(strlen($message)<250){
-		if(strpos($message, "<script")) !== false){
-			echo "<h1>Hey asshole</h1><br><hr><p>We found a fucking script tag, fuck you</p>";
-			$message="I am an asshole";
+		if(strpos($message, "<script") !== false){
+			//echo "<h1>Hey asshole</h1><br><hr><p>We found a fucking script tag, fuck you</p>";
+			//$message="I am an asshole";
                 }
 		if(strpos($message, "><br>") !== false){
 		$message="I tried to turn the whole chat green";
