@@ -9,10 +9,10 @@
 		//echo readfile("GODFUCKPHP.txt");
 		$idFileRead=fopen("WouldntItBeNiceToDie.txt","r+");
 		$idContents=readfile("WouldntItBeNiceToDie.txt");
-		echo "GodFuckHereGoesInt";
+		//echo "GodFuckHereGoesInt";
 		//(int)readfile("WouldntItBeNiceToDie.txt");
 		$idInt=(int)file_get_contents("WouldntItBeNiceToDie.txt");
-		echo $idInt;
+		//echo $idInt;
 
 		//echo $idContents;
 		//echo $idContents;
@@ -38,7 +38,7 @@
 		}
                 if(strlen($message)<250){
                 if(strpos($message, "<") !== false){
-                        echo "<h1>Dissallowed character</h1><br><hr><p>The character "<" is illegal due to exploits, for alternatives look at<br>our formatting help, thank you</p>";
+                echo "<h1>Dissallowed character</h1><br><hr><p>The character "<" is illegal due to exploits, for alternatives look at<br>our formatting help, thank you</p>";
                 } else {
               if(empty(explode("(quote)", $message)) == false){
                   $text_quoted=explode("(quote)", $message);
