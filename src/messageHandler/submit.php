@@ -54,9 +54,11 @@
                   }
               }
                 if (empty(explode("(br)", $message)) == false){
+		if (substr_count($message,"(br)") > 1){header('Location: /anonchat.php');}else{
                 $textquoted = explode("(br)", $message);
                 $message = $textquoted[0] . '<br>    ' . $textquoted[1];
                 }
+		}
                 $text_to_write = "<br>" . $name . ": " . $message;
                 fwrite($data_file, $text_to_write);
                 echo "\n" . $message;		
