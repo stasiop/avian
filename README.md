@@ -15,7 +15,7 @@ Good calling support
 <br>
 Updated DM system
 <br>
-More account customisation + MYsql accounts (almost done)
+More account customisation + Mysql accounts (almost done)
 <br>
 Themeing <br>
 Decentralisation <br>
