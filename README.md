@@ -15,7 +15,8 @@ Good calling support
 <br>
 Updated DM system
 <br>
-More account customisation<br>
+More account customisation + MYsql accounts (almost done)
+<br>
 Themeing <br>
 Decentralisation <br>
 some sort of P2P would be cool
