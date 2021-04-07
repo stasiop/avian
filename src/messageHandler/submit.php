@@ -56,7 +56,7 @@
                 if (empty(explode("(br)", $message)) == false){
 		if (substr_count($message,"(br)") > 1){header('Location: /anonchat.php');}else{
                 $textquoted = explode("(br)", $message);
-                $message = $textquoted[0] . '<br>    ' . $textquoted[1];
+                $message = $textquoted[0] . '<br>    ' . $textquoted[1] . "<br>";
                 }
 		}
                 $text_to_write = $name . ": " . $message;
