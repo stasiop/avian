@@ -5,7 +5,7 @@
     else { echo '<link rel="stylesheet" type="text/css" href="css/Stylesheet3.css">';}
     ?>
     <hr>
-    <form action="cssSet.php">
+    <form method="POST" action="cssSet.php">
       <label for="themes">Choose a theme:</label>
       <select name="theme">
         <option value="def">Defualt</option>
