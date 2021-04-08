@@ -72,7 +72,7 @@
                                                                         var iframe = document.getElementById('GFG');
                                                                         iframe.src = iframe.src;
 									Autoscroll();
-									if(document.hidden==true){
+									if((document.hidden)==true){
 									var audio = new Audio('/src/misc/msgnotif.wav');
 									audio.play();
 									}
