@@ -98,7 +98,7 @@
                                         task()
                                         
                                 </script>                         
-                                      <iframe id="GFG" src = "/src/messageHandler/message.html" width = "100%" height = "100%"style="border : 0px; color:white">
+                                      <iframe id="GFG" src = "/src/messageHandler/message.php" width = "100%" height = "100%"style="border : 0px; color:white">
                                         Sorry your browser does not support inline frames. Use GNU IceCat.
                                       </iframe>
                         </div>
