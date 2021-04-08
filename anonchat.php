@@ -73,7 +73,7 @@
                                                                         iframe.src = iframe.src;
 									Autoscroll();
 									if((document.hidden)==true){
-									var audio = new Audio('/src/misc/msgnotif.wav');
+									var audio = new Audio('/src/misc/msgnotif.mp3');
 									audio.play();
 									}
                                                                         clientId=serverID;
