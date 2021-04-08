@@ -1,0 +1,44 @@
+body{
+    background-color: #222;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+button{
+    width: 15%;
+    font-size: 150%;
+    display: block;
+    padding: 1%;
+    margin-top: 1%;
+    color: #111;
+	background:#333;
+	border: #000 solid;
+	border-radius: 4px;
+	font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+button:hover{
+    background:#444;
+}
+#settingSelector{
+	margin-top: 2.5%;
+	margin-left: 1%;
+    
+}
+#Vertical{
+	border-left: rgb(77, 0, 219) solid;
+    height:101%;
+    margin-top: -11%;
+    float: right ;
+    margin-right: 81%;
+}
+iframe{
+    float: right;
+    margin-top: -52%;
+    margin-left: 4%;
+    /*margin-left: ;*/
+    color:white;
+    width: 79%;
+    height: 97%;
+    border: rgb(255, 55, 222) solid;
+   
+}
