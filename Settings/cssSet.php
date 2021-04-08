@@ -1,14 +1,15 @@
 <?php
+setcookie("style", "", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
 $selected=$_POST['theme'];
 switch ($selected) {
   case "W&B":
-    setcookie("style", "W&B", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
+    $_COOKIE["style"]="W&B";
     break;
   case "P&P":
-    setcookie("style", "W&B", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
+    $_COOKIE["style"]="P&P";
     break;
   case "def":
-    setcookie("style", "", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
+    $_COOKIE["style"]="";
     break;
 }
 header('Location: CSSEditor.php');
