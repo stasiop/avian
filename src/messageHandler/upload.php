@@ -40,7 +40,7 @@ if ($uploadOk == 0) {
 		} else {
 			$name = "Anon";
 		}
-		$data_file = fopen("message.html", "a+");
+		$data_file = fopen("message.php", "a+");
 		$text_to_write = "<br>" . $name . ':<br> <img src="/src/messageHandler/uploads/' . $renamefileto . '">';
 		fwrite($data_file, $text_to_write);
 		fclose($data_file);
