@@ -1,0 +1,25 @@
+body{
+    background-color: #ddd;
+}
+textarea{
+    margin: 2%;
+    padding: 2%;
+    width: 96%;
+    height: 84%;
+    background-color: #fff;
+    border: solid black;
+    border-radius: 15px;
+    text-decoration: none;
+}
+textarea:focus{
+    outline: none;
+}
+button{
+    border: 1px solid #777;
+    background-color: #ccc;
+    padding: 1%;
+    margin-left:1.9%;
+}
+button:hover{
+    background-color: #aaa;
+}
