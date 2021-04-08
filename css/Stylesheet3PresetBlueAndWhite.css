@@ -1,0 +1,45 @@
+ 
+body{
+    background-color: #ddd;
+    font-family: 'Courier New', Courier, monospace;
+    color: #666;
+}
+button{
+    width: 15%;
+    font-size: 150%;
+    display: block;
+    padding: 1%;
+    margin-top: 1%;
+    color: #bbb;
+	background:#aaa;
+	border: #000 solid;
+	border-radius: 4px;
+	font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+button:hover{
+    background:#888;
+}
+#settingSelector{
+	margin-top: 2.5%;
+	margin-left: 1%;
+
+}
+#Vertical{
+	border-left: rgb(77, 0, 219) solid;
+    height:101%;
+    margin-top: -11%;
+    float: right ;
+    margin-right: 81%;
+}
+iframe{
+    float: right;
+    margin-top: -52%;
+    margin-left: 4%;
+    /*margin-left: ;*/
+    color: #333;
+    width: 79%;
+    height: 97%;
+    border: rgb(255, 55, 222) solid;
+
+}
