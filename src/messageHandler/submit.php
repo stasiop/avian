@@ -1,5 +1,5 @@
 <?php	
-		$data_file = fopen("message.html", "a+");
+		$data_file = fopen("message.php", "a+");
 		$message = $_POST["message"];
 		
 		//$idContents=file_get_contents("ids.txt",true);
