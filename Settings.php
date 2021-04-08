@@ -11,7 +11,7 @@
 <body>
     <div id="settingSelector">
         <button>General</button>
-        <button>Themes</button>
+        <button onclick="window.location.href='Settings/CSSEditor.php'">Themes</button>
     </div>
 	<div id="Vertical">
 	</div>
