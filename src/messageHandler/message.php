@@ -3,8 +3,7 @@ Welcome to Global Chat!!!
 <?php
 if ($_COOKIE['style']=="W&B"){
 echo '* {color: black;  }';
-} else { echo '* 
-{color: white;  }';}
+} else { echo '* {color: white;  }';}
 ?>
 
 img {
