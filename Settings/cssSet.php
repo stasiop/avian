@@ -11,3 +11,5 @@ switch ($selected) {
     setcookie("style", "", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
     break;
 }
+header('Location: CSSEditor.php');
+?>
