@@ -1,5 +1,5 @@
 <?php
-$selected=&_POST['theme'];
+$selected=$_POST['theme'];
 switch ($selected) {
   case "W&B":
     setcookie("style", "W&B", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
