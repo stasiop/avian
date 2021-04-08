@@ -109,7 +109,7 @@
                                 var iframeCW = (iframeID.contentWindow || iframeID.contentDocument);
                                 document.getElementById('GFG').onload = function(){ setTimeout("document.getElementById('GFG').contentWindow.scrollTo(0, 99999999)", 1) }
                                 if (iframeCW.document) iframeCW = iframeCW.document;
-				document.getElementById("GFG").src = "/src/messageHandler/message.html"; // WHAT THE FUCK IS THIS SHIT IF THIS FIXED I WILL TEAR MY BALLS OFF, FUCK YOU FIREFOX
+				document.getElementById("GFG").src = "/src/messageHandler/message.php"; // WHAT THE FUCK IS THIS SHIT IF THIS FIXED I WILL TEAR MY BALLS OFF, FUCK YOU FIREFOX
                                 }
                            </script>
                            <script>
