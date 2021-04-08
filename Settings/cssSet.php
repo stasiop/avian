@@ -1,17 +1,18 @@
 <?php
 if (isset($_COOKIE['style']) == true){echo "poo";} else {
-setcookie("style", "def", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
+setcookie("style", "def", time() + (86400 * 365 * 4), "/"); echo 'it isnt set';// 86400 = 1 day
 }
 $selected=$_POST['theme'];
+echo $selected;
 switch ($selected) {
   case "W&B":
-    $_COOKIE["style"]="W&B";
+    setcookie("style", "WaB", time() + (86400 * 365 * 4), "/");// 86400 = 1 day
     break;
   case "P&P":
-    $_COOKIE["style"]="P&P";
+    setcookie("style", "PaP", time() + (86400 * 365 * 4), "/");
     break;
   case "def":
-    $_COOKIE["style"]="";
+    setcookie("style", " ", time() + (86400 * 365 * 4), "/");
     break;
 }
 header('Location: CSSEditor.php');
