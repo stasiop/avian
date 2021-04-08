@@ -1,5 +1,7 @@
 <?php
-setcookie("style", "", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
+if (isset($_COOKIE['style'])){echo "poo";} else {
+setcookie("style", "def", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
+}
 $selected=$_POST['theme'];
 switch ($selected) {
   case "W&B":
