@@ -1,5 +1,5 @@
 <?php
-if (isset($_COOKIE['style'])){echo "poo";} else {
+if (isset($_COOKIE['style']) == true){echo "poo";} else {
 setcookie("style", "def", time() + (86400 * 365 * 4), "/"); // 86400 = 1 day
 }
 $selected=$_POST['theme'];
