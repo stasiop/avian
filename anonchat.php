@@ -3,7 +3,12 @@
         <title>AnonChat</title>
         <body onload="Autoscroll();">
                 <div>
-                        <link type="text/css" rel="stylesheet" href="/css/Stylesheet.css">
+                        <?php
+                        if ($_COOKIE['style']=="W&B"){
+                        echo '<link type="text/css" rel="stylesheet" href="/css/StylesheetPresetBlueAndWhite.css">';
+                        } else { echo '<link type="text/css" rel="stylesheet" href="/css/Stylesheet.css">';}
+                        ?>
+                        
                         
                         <div class="textContainer">	
                                 <script type="text/javascript">   
