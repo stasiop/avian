@@ -4,7 +4,7 @@
     </Title>
     <?php
     if ($_COOKIE['style']=="P&P"){echo '<link rel="stylesheet" type="text/css" href="css/Stylesheet3PresetPinkAndPink.css">';}
-    if ($_COOKIE['style']=="W&B"){echo '<link rel="stylesheet" type="text/css" href="css/Stylesheet3PresetWhiteAndBlue.css">';}
+    if ($_COOKIE['style']=="W&B"){echo '<link rel="stylesheet" type="text/css" href="css/Stylesheet3PresetBlueAndWhite.css">';}
     else { echo '<link rel="stylesheet" type="text/css" href="css/Stylesheet3.css">';}
     ?>
 </head>
