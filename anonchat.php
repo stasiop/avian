@@ -4,8 +4,8 @@
         <body onload="Autoscroll();">
                 <div>
                         <?php
-                        if ($_COOKIE['style']=="W&B"){echo '<link type="text/css" rel="stylesheet" href="/css/StylesheetPresetBlueAndWhite.css">';}
-			if ($_COOKIE['style']=="P&P"){echo '<link type="text/css" rel="stylesheet" href="/css/StylesheetPresetPinkAndPink.css">';}
+                        if ($_COOKIE['style']=="WaB"){echo '<link type="text/css" rel="stylesheet" href="/css/StylesheetPresetBlueAndWhite.css">';}
+			if ($_COOKIE['style']=="PaP"){echo '<link type="text/css" rel="stylesheet" href="/css/StylesheetPresetPinkAndPink.css">';}
 			else { echo '<link type="text/css" rel="stylesheet" href="/css/Stylesheet.css">';}
                         ?>
                         
