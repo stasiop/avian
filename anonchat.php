@@ -108,12 +108,14 @@
                         </div>
                             <script>
                                 function Autoscroll() { // this is good
+                                var input = document.getElementById ("message");
+                                input.focus ();
                                 var iframeID = document.getElementById("GFG");
 
                                 var iframeCW = (iframeID.contentWindow || iframeID.contentDocument);
                                 document.getElementById('GFG').onload = function(){ setTimeout("document.getElementById('GFG').contentWindow.scrollTo(0, 99999999)", 1) }
                                 if (iframeCW.document) iframeCW = iframeCW.document;
-				document.getElementById("GFG").src = "/src/messageHandler/message.php"; // WHAT THE FUCK IS THIS SHIT IF THIS FIXED I WILL TEAR MY BALLS OFF, FUCK YOU FIREFOX
+                                document.getElementById("GFG").src = "/src/messageHandler/message.php"; // WHAT THE FUCK IS THIS SHIT IF THIS FIXED I WILL TEAR MY BALLS OFF, FUCK YOU FIREFOX
                                 }
                            </script>
                            <script>
@@ -124,7 +126,7 @@
                                 <input name="message" placeholder="Isn't avian so pog?!" id="message" type="text">
                                 <button type="submit" value="submit">Send</button>
                         </form>
-			<script type="text/javascript">document.msgform.msg.focus();</script> <!-- to focus on the input box, for easier typing -->
+                        <script type="text/javascript">document.msgform.message.focus();</script> <!-- to focus on the input box, for easier typing -->
 			<a href="/src/misc/formatHelp.html">Formatting Help</a>
                         <form action="/src/messageHandler/upload.php" method="post" enctype="multipart/form-data">
 							  Select image to upload:
