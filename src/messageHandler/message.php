@@ -1,4 +1,4 @@
-Welcome to Global Chat!!!
+Welcome to Global Chat!!! - Don't be an idiot
 <style>
 <?php
 if ($_COOKIE['style']=="W&B"){
