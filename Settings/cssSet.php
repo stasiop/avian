@@ -5,7 +5,7 @@ setcookie("style", "def", time() + (86400 * 365 * 4), "/"); echo 'it isnt set';/
 $selected=$_POST['theme'];
 echo $selected;
 switch ($selected) {
-case "W&B":
+case "WaB":
 	    $fCSSC=fopen("../CSS/StylesheetPresetWhiteAndBlue",'r');
 	    $WANDB=fread($fCSSC);
 	    fclose($fCSSC);    
@@ -22,7 +22,7 @@ case "W&B":
 	    }
         //setcookie("style", "WaB", time() + (86400 * 365 * 4), "/");// 86400 = 1 day
     break;
-  case "P&P":
+  case "PaP":
 	$fCSSC=fopen("../CSS/StylesheetPresetPinkAndPink",'r');
             $WANDB=fread($fCSSC);
             fclose($fCSSC);
