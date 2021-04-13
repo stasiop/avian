@@ -5,14 +5,43 @@ setcookie("style", "def", time() + (86400 * 365 * 4), "/"); echo 'it isnt set';/
 $selected=$_POST['theme'];
 echo $selected;
 switch ($selected) {
-  case "W&B":
-    setcookie("style", "WaB", time() + (86400 * 365 * 4), "/");// 86400 = 1 day
+case "W&B":
+	    $fCSSC=fopen("../CSS/StylesheetPresetWhiteAndBlue",'r');
+	    $WANDB=fread($fCSSC);
+	    fclose($fCSSC);    
+	    $fPCSSR=fopen("../PAMregister/names/".$_SESSION['Username']."/css.css",'w+');
+	    fwrite($fPCSSR,$WANDB);
+	    fclose($fPCSSR);
+	    for($i=0;$i<5;$i++){
+		    $fCSSC=fopen("../CSS/Stylesheet".$i."PresetWhiteAndBlue",'r');
+		    $WANDB=fread($fCSSC);
+		    fclose($fCSSC);
+	            $fPCSSR=fopen("../PAMregister/names/".$_SESSION['Username'."/css.css",'w+']);
+		    fwrite($fPCSSR,$WANDB);
+		    fclose($fPCSSR);
+	    }
+        //setcookie("style", "WaB", time() + (86400 * 365 * 4), "/");// 86400 = 1 day
     break;
   case "P&P":
-    setcookie("style", "PaP", time() + (86400 * 365 * 4), "/");
+	$fCSSC=fopen("../CSS/StylesheetPresetPinkAndPink",'r');
+            $WANDB=fread($fCSSC);
+            fclose($fCSSC);
+            $fPCSSR=fopen("../PAMregister/names/".$_SESSION['Username']."/css.css",'w+');
+            fwrite($fPCSSR,$WANDB);
+            fclose($fPCSSR);
+            for($i=0;$i<5;$i++){
+                    $fCSSC=fopen("../CSS/Stylesheet".$i."PresetPinkAndPink",'r');
+                    $WANDB=fread($fCSSC);
+                    fclose($fCSSC);
+                    $fPCSSR=fopen("../PAMregister/names/".$_SESSION['Username'."/css.css",'w+']);
+                    fwrite($fPCSSR,$WANDB);
+                    fclose($fPCSSR);
+            }
+
+    //setcookie("style", "PaP", time() + (86400 * 365 * 4), "/");
     break;
   case "def":
-    setcookie("style", " ", time() + (86400 * 365 * 4), "/");
+    sewtcookie("style", " ", time() + (86400 * 365 * 4), "/");
     break;
 }
 header('Location: CSSEditor.php');
