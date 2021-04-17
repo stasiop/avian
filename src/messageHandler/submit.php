@@ -86,8 +86,8 @@
 			}
                 }
                 }
-		(isset($_POST['message'])){formatCheck();}
-                if (isset($_POST['fileToUpload'])){imageUpload();}
+		if (isset($_POST['message'])){formatCheck();}
+                if (isset($_FILE['fileToUpload']['tmp_name'])){imageUpload();}
                 fwrite($data_file, $text_to_write);
                 echo "<br>Your message was: " . $message . "<br>";
                 fclose($idFileRead);
