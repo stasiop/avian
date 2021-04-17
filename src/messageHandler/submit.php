@@ -14,26 +14,11 @@
 		} else {
 			$name = "Anon";
 		}
-		if (isset($_POST['message'])){formatCheck();}
-                if (isset($_POST['fileToUpload'])){imageUpload();}
-                fwrite($data_file, $text_to_write);
-                echo "<br>Your message was: " . $message . "<br>";
-                fclose($idFileRead);
-                echo "The ID for this message is: " . (string) $idInt . "<br>";
-                $idFile=fopen("WouldntItBeNiceToDie.txt","w+");
-                fwrite($idFile,(string)$idInt);
 
-                fclose($idFile);
-                fclose($data_file);
-
-                header('Location: /anonchat.php');
-		
 		function imageUpload(){
-			$target_dir = "uploads/";
-			setFileName:
+
 			$renamefileto = rand(0,2738912);
-			break;
-			if (file_exists("uploads/" . $renamefileto)){goto setFileName;}
+			if (file_exists("uploads/" . $renamefileto)){$renamefileto = rand(0,2738912);}
 			$target_file = $target_dir . $renamefileto;
 			$uploadOk = 1;
 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -61,6 +46,8 @@
 				} else {
 					echo "There was an error uploading your file";
 				}
+			}
+			}
 		}
 		
 		function formatCheck(){ //check for specific characters and strings
@@ -99,6 +86,20 @@
 			}
                 }
                 }
+		(isset($_POST['message'])){formatCheck();}
+                if (isset($_POST['fileToUpload'])){imageUpload();}
+                fwrite($data_file, $text_to_write);
+                echo "<br>Your message was: " . $message . "<br>";
+                fclose($idFileRead);
+                echo "The ID for this message is: " . (string) $idInt . "<br>";
+                $idFile=fopen("WouldntItBeNiceToDie.txt","w+");
+                fwrite($idFile,(string)$idInt);
+
+                fclose($idFile);
+                fclose($data_file);
+
+                header('Location: /anonchat.php');
+		
 
 ?>
 
