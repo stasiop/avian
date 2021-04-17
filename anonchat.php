@@ -122,17 +122,12 @@
                                 Autoscroll();
                             </script>
                         <form id="msgform" method="POST" action="src/messageHandler/submit.php">
-
+				<input type="file" name="fileToUpload" id="fileToUpload">
                                 <input name="message" placeholder="Isn't avian so pog?!" id="message" type="text">
                                 <button type="submit" value="submit">Send</button>
                         </form>
                         <script type="text/javascript">document.msgform.message.focus();</script> <!-- to focus on the input box, for easier typing -->
 			<a href="/src/misc/formatHelp.html">Formatting Help</a>
-                        <form action="/src/messageHandler/upload.php" method="post" enctype="multipart/form-data">
-							  Select image to upload:
-							  <input type="file" name="fileToUpload" id="fileToUpload">
-							  <input type="submit" value="Upload Image" name="submit">
-						</form>
                 </div>
         </body>
 
