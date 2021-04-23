@@ -20,11 +20,11 @@ if (!isset($_SESSION['DMnum'])) {
 		Sorry your browser does not support inline frames. Use GNU IceCat.
     </iframe>
 </div>
-	<form method="POST" action="/src/dm/submitDM.php">
-	<input type="file" name="fileToUpload" id="fileToUpload">
+	<form method="POST" action="/src/dm/submitDM.php" enctype="multipart/form-data">
+	 <input type="file" name="fileToUpload" id="fileToUpload">
         <input name="message" placeholder="Isn't avian so pog?!" type="text">
         <button type="submit" value="submit">Send</button>
-    </form>
+       </form>
 	<script>
 		function Autoscroll() {			// this is good
 		var iframeID = document.getElementById("GFG");
