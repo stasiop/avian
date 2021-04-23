@@ -68,7 +68,7 @@
                                         echo "File is an image - " . $check["mime"] . ".";
                                         $uploadOk = 1;
                                         $uploadType = 1;
-                                } elseif (preg_match('/^.*\.(mp4|mov|mpg|mpeg|wmv|mkv)$/i', $filename)){
+                                } elseif (preg_match('/^.*\.(mp4|mov|mpg|mpeg|wmv|mkv|webm)$/i', $filename)){
                                         $uploadType = 2;
                                         echo "File is an video";
                                         $uploadOk = 1;
