@@ -16,7 +16,7 @@ if (!isset($_SESSION['DMnum'])) {
 <body onload="Autoscroll();">
 <h2>#<?php echo $_SESSION['DMnum'] ?></h2>
 <div class="textContainer">
-	<iframe id="GFG" src = "/src/dm/<?php echo $_SESSION['DMnum'];?>.html" width = "60%" height = "87.5%"style="border: 0px">
+	<iframe id="GFG" src = "/src/dm/<?php echo $_SESSION['DMnum'];?>.html" width = "100%" height = "100%" style="border: 0px">
 		Sorry your browser does not support inline frames. Use GNU IceCat.
     </iframe>
 </div>
