@@ -105,11 +105,8 @@
                 echo "The ID for this message is: " . (string) $idInt . "<br>";
                 $idFile=fopen("WouldntItBeNiceToDie.txt","w+");
                 fwrite($idFile,(string)$idInt);
-
                 fclose($idFile);
                 fclose($data_file);
-
                 header('Location: /anonchat.php');
-
-
 ?>
+
