@@ -17,6 +17,7 @@
                 } else {
                         $name = "Anon";
                 }
+		$text_to_write = "<br>" . $name . ":";
                 $snedited = 0;
                 function formatCheck($name, $message){ //check for specific characters and strings
                         $edited = 0;
