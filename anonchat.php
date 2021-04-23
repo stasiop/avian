@@ -87,21 +87,14 @@
                                                                         }
                                                         }
                                                                 }
-                                                                
-                                                        
                                                         }else{
                                                                 window.firstFrameOfWindow=false;
                                                         }
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
                                                 };
                                         }
                                         task()
                                         
-                                </script>                         
+                                </script>
                                       <iframe id="GFG" src = "/src/messageHandler/message.php" width = "100%" height = "100%"style="border : 0px; color:white">
                                         Sorry your browser does not support inline frames. Use GNU IceCat.
                                       </iframe>
@@ -120,21 +113,15 @@
                            </script>
                            <script>
                                 Autoscroll();
+                                document.getElementById('fileToUpload').value= null;
                             </script>
-                        <form id="msgform" method="POST" action="src/messageHandler/submit.php">
-				<input type="file" name="fileToUpload" id="fileToUpload">
+                        <form id="msgform" method="POST" action="src/messageHandler/submit.php" enctype="multipart/form-data">
+                                <input type="file" name="fileToUpload" id="fileToUpload">
                                 <input name="message" placeholder="Isn't avian so pog?!" id="message" type="text">
                                 <button type="submit" value="submit">Send</button>
                         </form>
                         <script type="text/javascript">document.msgform.message.focus();</script> <!-- to focus on the input box, for easier typing -->
-			<a href="/src/misc/formatHelp.html">Formatting Help</a>
+                        <a href="/src/misc/formatHelp.html">Formatting Help</a>
                 </div>
         </body>
-
 </html>
-
-
-
-
-
-
