@@ -50,7 +50,7 @@
                 function imageUpload($filename, $filetmpname, $postfile, $text_to_write1){
                         $target_dir = "../messageHandler/uploads/";
                         $renamefileto = rand(0,2738912);
-                        if (file_exists("uploads/" . $renamefileto)){$renamefileto = rand(0,2738912);}
+                        if (file_exists("../messageHandler/uploads/" . $renamefileto)){$renamefileto = rand(0,2738912);}
                         $target_file = $target_dir . $renamefileto;
                         $uploadOk = 1;
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -65,7 +65,7 @@
                                         echo "File is an video";
                                         $uploadOk = 1;
                                 } else {
-                        echo "File is not an image.";
+                                        echo "File is not an image.";
                                         $uploadOk = 0; // stan why is this not a bool
                                         $uploadType = 0;
                                 }
@@ -78,7 +78,7 @@
                                         if ($uploadType == 1){
                                                 $text_to_write1 = $text_to_write1 . '<br> <img src="/src/messageHandler/uploads/' . $renamefileto . '">';
                                         } elseif ($uploadType == 2){
-                                                $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
+                                                $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="/src/messageHandler/uploads/' . $renamefileto . '" type="' . mime_content_type('../messageHandler/uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
 
                                         }
                                 } else {
