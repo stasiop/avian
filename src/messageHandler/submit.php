@@ -1,6 +1,8 @@
 <?php
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
+		ini_set('post_max_size', '20M');
+		ini_set('upload_max_filesize', '20M');
                 error_reporting(E_ALL);
                 $data_file = fopen("message.php", "a+");
                 $message = $_POST["message"];
