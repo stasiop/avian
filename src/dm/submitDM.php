@@ -56,16 +56,22 @@
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                         // Check if image file is a actual image or fake image
                                 $check = getimagesize($filetmpname);
+				$mimeType = mime_content_type($filetmpname);
+				$fileType = explode('/', $mimeType)[0]; 
                                 if($check !== false) {
                                         echo "File is an image - " . $check["mime"] . ".";
                                         $uploadOk = 1;
                                         $uploadType = 1;
-                                } elseif (preg_match('/^.*\.(mp4|mov|mpg|mpeg|wmv|mkv|webm)$/i', $filename)){
+                                } elseif ($fileType == "video"){
                                         $uploadType = 2;
                                         echo "File is an video";
                                         $uploadOk = 1;
-                                } else {
-                                        echo "File is not an image.";
+                                } elseif ($fileType == "audio"){
+					$uploadType = 3;
+                                        echo "File is audio";
+                                        $uploadOk = 1;
+				}else {
+                        echo "File is not an image.";
                                         $uploadOk = 0; // stan why is this not a bool
                                         $uploadType = 0;
                                 }
@@ -78,12 +84,12 @@
                                         if ($uploadType == 1){
                                                 $text_to_write1 = $text_to_write1 . '<br> <img src="/src/messageHandler/uploads/' . $renamefileto . '">';
                                         } elseif ($uploadType == 2){
-                                                $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="/src/messageHandler/uploads/' . $renamefileto . '" type="' . mime_content_type('../messageHandler/uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
-
-                                        }
-                                } else {
-                                        echo "There was an error uploading your file";
-                                }
+                                                $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
+                                        } elseif ($uploadType == 3){
+						$text_to_write1 = $text_to_write1 . '<br>"' . $filename . '"<br>' . '<audio controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the audio tag</audio>';
+                                	} else {
+                                        	echo "There was an error uploading your file";
+                                	}
                         }
                         return $text_to_write1;
                         }
