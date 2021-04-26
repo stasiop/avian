@@ -84,15 +84,16 @@
                                         if ($uploadType == 1){
                                                 $text_to_write1 = $text_to_write1 . '<br> <img src="/src/messageHandler/uploads/' . $renamefileto . '">';
                                         } elseif ($uploadType == 2){
-                                                $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
+                                                $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="../messageHandler/uploads/' . $renamefileto . '" type="' . mime_content_type('../messageHandler/uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
                                         } elseif ($uploadType == 3){
-						$text_to_write1 = $text_to_write1 . '<br>"' . $filename . '"<br>' . '<audio controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the audio tag</audio>';
+						$text_to_write1 = $text_to_write1 . '<br>"' . $filename . '"<br>' . '<audio controls><source src="../messageHandler/uploads/' . $renamefileto . '" type="' . mime_content_type('../messageHandler/uploads/' . $renamefileto) . '">Your browser does not support the audio tag</audio>';
                                 	} else {
                                         	echo "There was an error uploading your file";
                                 	}
                         }
                         return $text_to_write1;
                         }
+		}
                 if (empty($_POST['message']) == false){echo "big chungus"; $snedited = 1; $text_to_write = formatCheck($name, $message);}
                 if (empty($_FILES['fileToUpload']['tmp_name']) == false){$snedited = 1; echo "big blungus"; $text_to_write = imageUpload($_FILES["fileToUpload"]["name"], $_FILES["fileToUpload"]["tmp_name"], $_POST["fileToUpload"], $text_to_write);}
                 if ($snedited == 0){$text_to_write = ''; header('Location: dm_finder.php');}
