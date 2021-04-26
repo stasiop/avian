@@ -101,6 +101,7 @@
                         }
                         return $text_to_write1;
                         }
+		}
                 if (empty($_POST['message']) == false){echo "big chungus"; $snedited = 1; $text_to_write = formatCheck($name, $message);}
                 if (empty($_FILES['fileToUpload']['tmp_name']) == false){$snedited = 1; echo "big blungus"; $text_to_write = imageUpload($_FILES["fileToUpload"]["name"], $_FILES["fileToUpload"]["tmp_name"], $_POST["fileToUpload"], $text_to_write);}
                 if ($snedited == 0){$text_to_write = ''; header('Location: /anonchat.php');}
