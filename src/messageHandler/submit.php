@@ -94,7 +94,7 @@
                                         } elseif ($uploadType == 2){
                                                 $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
                                         } elseif ($uploadType == 3){
-						$text_to_write1 = $text_to_write1 . '<br> <audio controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the audio tag</audio>';
+						$text_to_write1 = $text_to_write1 . '<br>"' . $filename . '"<br>' . '<audio controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the audio tag</audio>';
                                 	} else {
                                         	echo "There was an error uploading your file";
                                 	}
