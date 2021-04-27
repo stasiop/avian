@@ -6,6 +6,10 @@ please don't sue us
 p.s, even though it's free software, don't look at our code. For your sanity.<br>
 <img src="https://media.tenor.com/images/514bb71e0b07434490040567e4761357/tenor.gif" alt="cat">
 <br>
+# Necessary configuration
+Set upload_max_filesize and post_max_size to any value in your php.ini <br>
+follow the steps in TABLEsetup.txt to set up mysql
+<br>
 # TODO
 This is the todo list for things todo!
 <br>
@@ -15,7 +19,7 @@ Good calling support
 <br>
 Updated DM system
 <br>
-More account customisation
+More account customisation + Mysql accounts (almost done)
 <br>
 Themeing <br>
 Decentralisation <br>
@@ -23,4 +27,5 @@ some sort of P2P would be cool
 # Licensing
 Avian is Free Software licensed under the [GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.html) <br>
 <img src="https://www.gnu.org/graphics/agplv3-with-text-162x68.png">
-
+# Helpful config
+There is a python file that deletes file older than 30days, it requires config inside the file to change the file path
