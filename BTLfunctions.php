@@ -44,13 +44,14 @@ function login($con, $email, $password){
         $UVIDF16 = sprintf('%016u', $take["UniversalID"]);
         $_SESSION["UniversalID"] = $UVIDF16;
 	$Username = $take["Username"];
-	$Username = $_SESSION["Username"];
+	$_SESSION["Username"] = $Username;
+	echo $_SESSION["Username"];
 	$path = "PAMregister/users/$Username";
 //	$upath = "PAMregister/users/$UVIDF16";
 //	$path = $upath . "-" . $Username;
 	if (!file_exists($path)) {
 		mkdir($path, 0777);
 	}
-	header("location: /accountScreen.php");	
+		
     }
 }
