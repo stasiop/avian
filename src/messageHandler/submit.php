@@ -1,4 +1,5 @@
 <?php
+		session_start();
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 error_reporting(E_ALL);
@@ -8,12 +9,8 @@
                 $idContents=readfile("WouldntItBeNiceToDie.txt");
                 $idInt=(int)file_get_contents("WouldntItBeNiceToDie.txt");
                 $idInt++;
-                if (isset($_COOKIE['pamuser'])){
-                        $ufname = $_COOKIE['pamuser'];
-                        $sfname = base64_decode($ufname);
-                        $name = substr($sfname, 0, -6); #0000
-                } elseif (isset($_COOKIE['user'])) {
-                        $name="Anon";
+                if (isset($_SESSION["Username"])){
+                        $name = $_SESSION["Username"];
                 } else {
                         $name = "Anon";
                 }
@@ -90,9 +87,9 @@
                                 if (move_uploaded_file($filetmpname, $target_file)) {
                                         echo "The file ". htmlspecialchars( basename($filename)). " has been uploaded.";
                                         if ($uploadType == 1){
-                                                $text_to_write1 = $text_to_write1 . '<br> <img src="/src/messageHandler/uploads/' . $renamefileto . '">';
+                                                $text_to_write1 = $text_to_write1 . '<br>"' . $filename . '"<br>' . '<br> <img src="/src/messageHandler/uploads/' . $renamefileto . '">';
                                         } elseif ($uploadType == 2){
-                                                $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
+                                                $text_to_write1 = $text_to_write1 . '<br>"' . $filename . '"<br>' . '<video width="320" height="240" controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
                                         } elseif ($uploadType == 3){
 						$text_to_write1 = $text_to_write1 . '<br>"' . $filename . '"<br>' . '<audio controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the audio tag</audio>';
                                 	} else {

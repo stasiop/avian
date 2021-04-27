@@ -1,8 +1,10 @@
 <title>Theme Selector</title>
     <?php
-    if ($_COOKIE['style']=="PaP"){echo '<link rel="stylesheet" type="text/css" href="css/Stylesheet3PresetPinkAndPink.css">';}
-    if ($_COOKIE['style']=="WaB"){echo '<link rel="stylesheet" type="text/css" href="css/Stylesheet3PresetBlueAndWhite.css">';}
-    else { echo '<link rel="stylesheet" type="text/css" href="css/Stylesheet3.css">';}
+    if($_SESSION["Username"]){
+        echo "<link rel='stylesheet' type='text/css' href='../PAMregister/users/'.$_SESSION['Username']'/CSS/css4.css'>";
+    }else{
+        echo "<link rel='stylesheet' type='text/css' href='../css/Stylesheet4.css'>";
+    }
     ?>
     <hr>
     <form method="POST" action="cssSet.php">
@@ -11,6 +13,7 @@
         <option value="def">Defualt</option>
         <option value="P&P">Pink</option>
         <option value="W&B">White and Blue</option>
+          <option value="cus">Custom</option>
       </select>
       <br><br>
       <input type="submit" value="Submit">

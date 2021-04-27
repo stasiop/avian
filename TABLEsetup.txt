@@ -1,0 +1,7 @@
+* make database called login_system *
+CREATE TABLE users (
+    UniversalID int(16) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    Username varchar(128)NOT NULL,
+    Email varchar(128)NOT NULL,
+    Password varchar(128)NOT NULL
+);
