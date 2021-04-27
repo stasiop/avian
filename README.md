@@ -31,5 +31,6 @@ There is a python file that deletes file older than 30days, it requires config i
 # Licensing
 Avian is Free Software licensed under the [GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.html) <br>
 <img src="https://www.gnu.org/graphics/agplv3-with-text-162x68.png">
-<br> <br>
+<br> <br> <br>
 <img src="https://avian.app/src/images/avianalternative.png" alt="dababy">
+
