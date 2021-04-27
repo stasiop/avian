@@ -51,7 +51,7 @@
                                                         serverID = this.responseText;
                                                 }
                                                 };
-                                                        xhttp.open("GET", "/src/messageHandler/WfriendouldntItBeNiceToDie.txt", true);
+                                                        xhttp.open("GET", "/src/messageHandler/WouldntItBeNiceToDie.txt", true);
                                                         xhttp.send();
                                                 }
                                         const task = async () => {
