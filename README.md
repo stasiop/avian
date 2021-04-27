@@ -21,12 +21,7 @@ Updated DM system
 <br>
 More account customisation
 <br>
-Mysql accounts # AVIAN
-We are not responsible for anything that may happen if you use avian, e.g, you turn into amogus
-<br>
-please don't sue us
-<br>
-p.s, even though it's free software, don't look at our code. For your sanity.<br>
+Mysql accounts ✓
 <img src="https://media1.tenor.com/images/556f10e5351353577a7f5edf83c583ea/tenor.gif?itemid=21062222" alt="dababy">
 <br>
 # Necessary configuration
