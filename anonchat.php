@@ -13,13 +13,6 @@
 
 				}
 			?>
-
-
-                        <div class="textContainer">	
-                                <script type="text/javascript">   
-                        ?>
-
-
                         <div class="textContainer">
                                 <script type="text/javascript">
                                 function getCookie(cname) {
