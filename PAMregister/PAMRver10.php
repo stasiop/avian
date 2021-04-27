@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <meta http-equiv="X-UA-Compatible"> <!-- cool thing that picks default redering engine -->
+  <meta http-equiv="X-UA-Compatible"> 
   <link rel="stylesheet" type="text/css" href="pamstylesheet.css"/>
   <title>PAMR</title>
 </head>
@@ -23,11 +23,13 @@
         <input type="password" name="password"  autocomplete="off" required>
         <label for="">Password</label>
       </div>
+      <div class="input-box">
+        <input type="password" name="Rpassword"  autocomplete="off" required>
+        <label for="">Rewrite Password</label>
+      </div>
         <input type="submit" name="submit" value="Submit"/>
     </form>
   </div>
 </body>
 </html>
-<script>
-    // Work in progress will be base 64 encryptor / AES-128 if i can be bothered
-</script>
+

@@ -29,6 +29,3 @@
   </div>
 </body>
 </html>
-<script>
-    // Work in progress will be base 64 encryptor / AES-128 if i can be bothered
-</script>

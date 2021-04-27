@@ -1,5 +1,13 @@
-<link type="text/css" rel="stylesheet" href="css/Stylesheet1.css">
-<link rel="icon" type="image/jpg" href="/src/images/avian.jpg"/>
+<?php
+if(isset($_SESSION['Username'])){
+
+        echo '<link type="text/css" rel="stylesheet" href="PAMregister/users/".$SESSION["Username"]."CSS/css1.css">';
+  }else{
+    echo '<link type="text/css" rel="stylesheet" href="css/Stylesheet1.css">';
+  }
+?>
+
+<link rel="icon" type="image/png" href="/src/images/avianalterantive.png"/>
 <div>
 
         <hr>
@@ -76,5 +84,6 @@
         
 
 </div>
+
 
 
