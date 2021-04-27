@@ -1,17 +1,27 @@
+
 <html>
         <head></head>
         <title>AnonChat</title>
         <body onload="Autoscroll();">
                 <div>
                         <?php
-                        if ($_COOKIE['style']=="WaB"){echo '<link type="text/css" rel="stylesheet" href="/css/StylesheetPresetBlueAndWhite.css">';}
-			if ($_COOKIE['style']=="PaP"){echo '<link type="text/css" rel="stylesheet" href="/css/StylesheetPresetPinkAndPink.css">';}
-			else { echo '<link type="text/css" rel="stylesheet" href="/css/Stylesheet.css">';}
-                        ?>
-                        
-                        
+				if(isset($_SESSION['Username'])){
+					$PATH='PAMregiser/users/'.$SESSION['Username'].'/CSS/css.css';
+                			echo "<link type='text/css' rel='stylesheet' href=''.$PATH.''";
+				}else{
+					echo '<link type="text/css" rel="stylesheet" href="/css/Stylesheet.css">';                      
+
+				}
+			?>
+
+
                         <div class="textContainer">	
                                 <script type="text/javascript">   
+                        ?>
+
+
+                        <div class="textContainer">
+                                <script type="text/javascript">
                                 function getCookie(cname) {
                                                 var name = cname + "=";
                                                 var decodedCookie = decodeURIComponent(document.cookie);
@@ -22,12 +32,12 @@
                                                 c = c.substring(1);
                                                 }
                                                 if (c.indexOf(name) == 0) {
-                                                        
+
                                                 return c.substring(name.length, c.length);
                                                 }
                                                 }
                                                 return "";
-                                        }     
+                                        }
                                         window.qwer=true;
                                         window.firstFrameOfWindow=true;
                                         window.secondFrameOfWindow=true;
@@ -38,7 +48,7 @@
                                                 var x=true;
                                                 window.qwer=false;
                                         }
-                                        
+
                                         window.firstFrameOfWindow=true;
                                         function loadDoc() {
                                                 console.log("Loaded Document")
@@ -48,21 +58,21 @@
                                                         serverID = this.responseText;
                                                 }
                                                 };
-                                                        xhttp.open("GET", "/src/messageHandler/WouldntItBeNiceToDie.txt", true);
+                                                        xhttp.open("GET", "/src/messageHandler/WfriendouldntItBeNiceToDie.txt", true);
                                                         xhttp.send();
                                                 }
                                         const task = async () => {
-                                                
+
                                                 while(x) {
-                                                        
-                                                        
-                                                        
+
+
+
                                                         //fuck i hate my fucking life
                                                         await new Promise(r => setTimeout(r, 1000));
-                                                        
-                                                        
+
+
                                                         loadDoc();
-                                                        
+
                                                         console.log("serverID "+serverID)
                                                         console.log("clientID "+clientId)
                                                         if(!window.firstFrameOfWindow){
@@ -92,7 +102,7 @@
                                                 };
                                         }
                                         task()
-                                        
+
                                 </script>
                                       <iframe id="GFG" src = "/src/messageHandler/message.php" width = "100%" height = "100%"style="border : 0px; color:white">
                                         Sorry your browser does not support inline frames. Use GNU IceCat.

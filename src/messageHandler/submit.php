@@ -8,12 +8,8 @@
                 $idContents=readfile("WouldntItBeNiceToDie.txt");
                 $idInt=(int)file_get_contents("WouldntItBeNiceToDie.txt");
                 $idInt++;
-                if (isset($_COOKIE['pamuser'])){
-                        $ufname = $_COOKIE['pamuser'];
-                        $sfname = base64_decode($ufname);
-                        $name = substr($sfname, 0, -6); #0000
-                } elseif (isset($_COOKIE['user'])) {
-                        $name="Anon";
+                if (isset($_SESSION["Username"])){
+                        $name = $_SESSION["Username"];
                 } else {
                         $name = "Anon";
                 }
@@ -58,28 +54,22 @@
                 function imageUpload($filename, $filetmpname, $postfile, $text_to_write1){
                         $target_dir = "uploads/";
                         $renamefileto = rand(0,2738912);
-                        while (file_exists("uploads/" . $renamefileto)){$renamefileto = rand(0,2738912);}
+                        if (file_exists("uploads/" . $renamefileto)){$renamefileto = rand(0,2738912);}
                         $target_file = $target_dir . $renamefileto;
                         $uploadOk = 1;
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                         // Check if image file is a actual image or fake image
                                 $check = getimagesize($filetmpname);
-				$mimeType = mime_content_type($filetmpname);
-				$fileType = explode('/', $mimeType)[0]; 
                                 if($check !== false) {
                                         echo "File is an image - " . $check["mime"] . ".";
                                         $uploadOk = 1;
                                         $uploadType = 1;
-                                } elseif ($fileType == "video"){
+                                } elseif (preg_match('/^.*\.(mp4|mov|mpg|mpeg|wmv|mkv|webm)$/i', $filename)){
                                         $uploadType = 2;
                                         echo "File is an video";
                                         $uploadOk = 1;
-                                } elseif ($fileType == "audio"){
-					$uploadType = 3;
-                                        echo "File is audio";
-                                        $uploadOk = 1;
-				}else {
-                        echo "File is not an image.";
+                                } else {
+                                echo "File is not an image.";
                                         $uploadOk = 0; // stan why is this not a bool
                                         $uploadType = 0;
                                 }
@@ -93,15 +83,14 @@
                                                 $text_to_write1 = $text_to_write1 . '<br> <img src="/src/messageHandler/uploads/' . $renamefileto . '">';
                                         } elseif ($uploadType == 2){
                                                 $text_to_write1 = $text_to_write1 . '<br> <video width="320" height="240" controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the video tag.</video>';
-                                        } elseif ($uploadType == 3){
-						$text_to_write1 = $text_to_write1 . '<br>"' . $filename . '"<br>' . '<audio controls><source src="uploads/' . $renamefileto . '" type="' . mime_content_type('uploads/' . $renamefileto) . '">Your browser does not support the audio tag</audio>';
-                                	} else {
-                                        	echo "There was an error uploading your file";
-                                	}
+
+                                        }
+                                } else {
+                                        echo "There was an error uploading your file";
+                                }
                         }
                         return $text_to_write1;
                         }
-		}
                 if (empty($_POST['message']) == false){echo "big chungus"; $snedited = 1; $text_to_write = formatCheck($name, $message);}
                 if (empty($_FILES['fileToUpload']['tmp_name']) == false){$snedited = 1; echo "big blungus"; $text_to_write = imageUpload($_FILES["fileToUpload"]["name"], $_FILES["fileToUpload"]["tmp_name"], $_POST["fileToUpload"], $text_to_write);}
                 if ($snedited == 0){$text_to_write = ''; header('Location: /anonchat.php');}
@@ -116,4 +105,3 @@
                 fclose($data_file);
                 header('Location: /anonchat.php');
 ?>
-

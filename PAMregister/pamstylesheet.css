@@ -56,6 +56,9 @@ body{
    color: #03a9f4;
    font-size: 12px;
   }
+label{
+	color: white;
+}
 .box input[type="submit"]{
    outline: 8px ridge rgba(170, 50, 220, .6);
    border-radius: 2rem;
