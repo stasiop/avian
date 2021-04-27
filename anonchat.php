@@ -13,13 +13,6 @@
 
 				}
 			?>
-
-
-                        <div class="textContainer">	
-                                <script type="text/javascript">   
-                        ?>
-
-
                         <div class="textContainer">
                                 <script type="text/javascript">
                                 function getCookie(cname) {
@@ -58,7 +51,7 @@
                                                         serverID = this.responseText;
                                                 }
                                                 };
-                                                        xhttp.open("GET", "/src/messageHandler/WfriendouldntItBeNiceToDie.txt", true);
+                                                        xhttp.open("GET", "/src/messageHandler/WouldntItBeNiceToDie.txt", true);
                                                         xhttp.send();
                                                 }
                                         const task = async () => {
