@@ -13,7 +13,7 @@ There is a python file that deletes file older than 30days, it requires config i
 ## TODO
 This is the todo list for things todo!
 <br>
-Mysql accounts (almost done)
+Mysql accounts ✓
 <br>
 Updated DM system
 <br>
