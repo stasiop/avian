@@ -22,10 +22,6 @@ Updated DM system
 More account customisation
 <br>
 Mysql accounts ✓
-<br>
-# Necessary configuration
-Set upload_max_filesize and post_max_size to any value in your php.ini <br>
-follow the steps in TABLEsetup.txt to set up mysql
 # Helpful config
 There is a python file that deletes file older than 30days, it requires config inside the file to change the file path
 # Licensing
