@@ -45,7 +45,7 @@ function login($con, $email, $password){
         $_SESSION["UniversalID"] = $UVIDF16;
 	$Username = $take["Username"];
 	$_SESSION["Username"] = $Username;
-	$path = "PAMregister/users/$Username";
+	$path = "PAMregister/users/$UVIDF16";
 //	$upath = "PAMregister/users/$UVIDF16";
 //	$path = $upath . "-" . $Username;
 	if (!file_exists($path)) {
