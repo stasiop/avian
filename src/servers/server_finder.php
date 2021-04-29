@@ -4,7 +4,7 @@ table, th, td {
 }                                                                                                                                                                                                        
 </style>
 $sql_pass="";
-<table style="width='100%'"><!--setup user list-->                                                                                                                                                       
+<table style="width='100%'"><!--setup user list-->                                                                                   sr                                                                    
 <?php                                                                                                                                                                                                    
 $con = mysqli_connect("127.0.0.1",$sql_pass,"","server_nfo");                                                                                                                                    
                                                                                                                                                                                                          
@@ -13,9 +13,10 @@ if (mysqli_connect_errno()) {
   exit();                                                                                                                                                                                                
 }                                                                                                                                                                                                        
                                                                                                                                                                                                          
-// Perform query                                                                                                                                                                                         
-                                                                                                                                                                                                         
-if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_id=420')) {                                                                                                           
+// Perform query
+
+// fuck you stan                                                                                                                                                                                                        
+if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_id=420')) { // why the frig did you not use fn taken?                                                                                                           
   while ($row = mysqli_fetch_row($result)){                                                                                                                                                              
         if(strpos($row[0], ",")){                                                                                                                                                                        
                 $result = explode(",", $row[0]);                                                                                                                                                         
