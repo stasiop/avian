@@ -15,7 +15,8 @@ if (mysqli_connect_errno()) {
                                                                                                                                                                                                          
 // Perform query
 
-// fuck you stan                                                                                                                                                                                                        
+// fuck you stan           
+  // fuck deez nuts - stan
 if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_id=420')) { // amogus                                                                                                       
   while ($row = mysqli_fetch_row($result)){                                                                                                                                                              
         if(strpos($row[0], ",")){                                                                                                                                                                        
