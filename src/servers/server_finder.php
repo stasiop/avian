@@ -1,18 +1,30 @@
-<table style="width:100%">
-<?php
-session_start();
-$servername = "127.0.0.1";
-$DBusername ="root"; 
-$DBpassword= ""; // blanked for source 
-$DBname = "server_nfo";
-
-$con = mysqli_connect($servername, $DBusername, $DBpassword, $DBname);
-
-if(!$con){
-    die("mysql has sh*t the bin :" . mysqli_connect_error());
-}
-$current_server = 9;
-$sql = "SELECT server_users FROM MyGuests WHERE server_id LIKE " . $current_server;
-$result = mysqli_query($con, $sql);
-echo $result;
-?>
+<table style="width='100%'">                                                                                                                                                                                                                             
+<?php                                                                                                                                                                                                                                                    
+$con = mysqli_connect("127.0.0.1","root","avianrox123","server_nfo");                                                                                                                                                                                    
+                                                                                                                                                                                                                                                         
+if (mysqli_connect_errno()) {                                                                                                                                                                                                                            
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();                                                                                                                                                                                          
+  exit();                                                                                                                                                                                                                                                
+}                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                         
+// Perform query                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                         
+if ($result = mysqli_query($con, 'SELECT server_name FROM server_nfo WHERE server_id=420')) {                                                                                                                                                            
+  while ($row = mysqli_fetch_row($result)){                                                                                                                                                                                                              
+        //if(explode(",", $row[0]) != false){                                                                                                                                                                                                            
+        //      $result = explode(",", $row[0]);                                                                                                                                                                                                         
+        //      $amount_of_users = count($result);                                                                                                                                                                                                       
+        //      while($i = 0, $i < $amount_of_users, $i++){                                                                                                                                                                                              
+        //              echo "<tr>" . $result[i] . "</tr>";                                                                                                                                                                                              
+        //      }                                                                                                                                                                                                                                        
+        //} else {                                                                                                                                                                                                                                       
+                echo "<tr><th>" . $row[0] . "</th></tr>";                                                                                                                                                                                                
+        //}                                                                                                                                                                                                                                              
+  }                                                                                                                                                                                                                                                      
+  // Free result set                                                                                                                                                                                                                                     
+  mysqli_free_result($result);                                                                                                                                                                                                                           
+}                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                         
+mysqli_close($con);                                                                                                                                                                                                                                      
+?>                                                                                                                                                                                                                                                       
+</table>                                
