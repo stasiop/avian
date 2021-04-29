@@ -6,7 +6,7 @@ table, th, td {
 $sql_pass="";
 <table style="width='100%'"><!--setup user list-->                                                                   
 <?php                                                                                                                                                                                                    
-$con = mysqli_connect("127.0.0.1",$sql_pass,"","server_nfo");                                                                                                                                    
+$con = mysqli_connect("127.0.0.1","root",$sql_pass,"server_nfo");                                                                                                                                    
                                                                                                                                                                                                          
 if (mysqli_connect_errno()) {                                                                                                                                                                            
   echo "Failed to connect to MySQL: " . mysqli_connect_error();                                                                                                                                          
