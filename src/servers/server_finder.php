@@ -2,10 +2,11 @@
 table, th, td {                                                                                                                                                                                          
   border: 1px solid black;                                                                                                                                                                               
 }                                                                                                                                                                                                        
-</style>                                                                                                                                                                                                 
+</style>
+$sql_pass="";
 <table style="width='100%'"><!--setup user list-->                                                                                                                                                       
 <?php                                                                                                                                                                                                    
-$con = mysqli_connect("127.0.0.1","root","avianrox123","server_nfo");                                                                                                                                    
+$con = mysqli_connect("127.0.0.1",$sql_pass,"","server_nfo");                                                                                                                                    
                                                                                                                                                                                                          
 if (mysqli_connect_errno()) {                                                                                                                                                                            
   echo "Failed to connect to MySQL: " . mysqli_connect_error();                                                                                                                                          
@@ -18,10 +19,9 @@ if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE serv
   while ($row = mysqli_fetch_row($result)){                                                                                                                                                              
         if(strpos($row[0], ",")){                                                                                                                                                                        
                 $result = explode(",", $row[0]);                                                                                                                                                         
-                //echo $result[0] . $result[1];                                                                                                                                                          
-                //$con = mysqli_connect("127.0.0.1","root","avianrox123","login_system");                                                                                                                
+                //echo $result[0] . $result[1];                                                                                                                                                                                                                                                                          
                 foreach ($result as $value) {                                                                                                                                                            
-                        $con = mysqli_connect("127.0.0.1","root","avianrox123","login_system");                                                                                                          
+                        $con = mysqli_connect("127.0.0.1","root",$sql_pass,"login_system");                                                                                                          
                         if ($result = mysqli_query($con, 'SELECT Username FROM users WHERE UniversalID=' . $value )) {                                                                                   
                                  while ($row = mysqli_fetch_row($result)){                                                                                                                               
                                         $username = $row[0];                                                                                                                                             
@@ -38,7 +38,7 @@ if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE serv
   }                                                                                                                                                                                                      
   // Free result set                                                                                                                                                                                     
 }                                                                                                                                                                                                        
-$con = mysqli_connect("127.0.0.1","root","avianrox123","server_nfo");                                                                                                                                    
+$con = mysqli_connect("127.0.0.1","root",$sql_pass,"server_nfo");                                                                                                                                    
 mysqli_close($con);                                                                                                                                                                                      
 ?>                                                                                                                                                                                                       
 </table>
