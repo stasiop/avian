@@ -29,4 +29,4 @@ Avian is Free Software licensed under the [GNU Affero General Public License v3]
 <br>
 <br>
 ## Cool logo
-<img src="https://avian.app/src/images/sus.png" height="150" alt="dababy">
+<img src="https://avian.app/src/images/sus.png" height="500" alt="dababy">
