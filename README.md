@@ -1,5 +1,4 @@
 # AVIAN <img src="https://avian.app/src/images/avianalternative.png" height="25" alt="dababy">
-<img src="https://avian.app/src/images/sus.png" height="60" alt="dababy">
 We are not responsible for anything that may happen if you use avian, e.g, you turn into amogus
 <br>
 please don't sue us
@@ -28,3 +27,6 @@ More account customisation
 Avian is Free Software licensed under the [GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.html) <br>
 <img src="https://www.gnu.org/graphics/agplv3-with-text-162x68.png">
 <br>
+<br>
+## Cool logo
+<img src="https://avian.app/src/images/sus.png" height="150" alt="dababy">
