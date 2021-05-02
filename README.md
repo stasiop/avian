@@ -1,4 +1,5 @@
 # AVIAN <img src="https://avian.app/src/images/avianalternative.png" height="25" alt="dababy">
+<img src="https://avian.app/src/images/sus.png" height="60" alt="dababy">
 We are not responsible for anything that may happen if you use avian, e.g, you turn into amogus
 <br>
 please don't sue us
