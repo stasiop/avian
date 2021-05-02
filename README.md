@@ -4,7 +4,7 @@ We are not responsible for anything that may happen if you use avian, e.g, you t
 please don't sue us
 <br>
 p.s, even though it's free software, don't look at our code. For your sanity.<br>
-<img src="https://media.tenor.com/images/514bb71e0b07434490040567e4761357/tenor.gif" alt="cat">
+<img src="https://avian.app/src/images/mongus.gif" alt="cat">
 ## Necessary configuration
 Set upload_max_filesize and post_max_size to any value in your php.ini <br>
 follow the steps in TABLEsetup.txt to set up mysql
