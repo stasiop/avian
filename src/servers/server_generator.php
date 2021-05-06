@@ -12,5 +12,4 @@ ION['UniversalID'] ."]','" . (int)time() . "','" . bin2hex(random_bytes(3)) . "'
         } else {                                                                                                                                                                                                                                         
                 echo "you already own a server";                                                                                                                                                                                                         
         }                                                                                                                                                                                                                                                
-?>                                                                                                                                                                                                                                                       
-e    
+?>
