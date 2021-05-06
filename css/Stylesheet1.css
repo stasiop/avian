@@ -1,61 +1,49 @@
-body{
-    background-color: #222;
-    font-family: 'Courier New', Courier, monospace;
-}
-#container{
-    background-color: #111;
-    height: 65%;
-
-}
-#Title{
-    margin-left: 34%;
-    color: white;
-    font-size: 350%;
-}
-a{
-    background-color: #212121;
-    text-decoration: none;
-    color:white;  
-    padding:1%;
-}
-a:hover{
-    background-color: #333;
-}
-#anon{
-  
-    margin-left: 16%;
-    font-size: 250%;
-    border: black ;
-    border-style: solid ;
-}
-#login{
-    text-align:center;
-    align-self: center;
-
-    margin-left: 26%;
-    
-    font-size: 250%;
-    border: black ;
-    border-style: solid ;
-}
-#dms{
-    margin-top: 10%;
-    margin-left: 46%;
-    
-    font-size: 250%;
-    border: black ;
-    border-style: solid ;
-    
-}
-#dms::after{
-    padding:none;
-}
-#idfk{
-    height: 2.1%;
-    
-}
-hr{
-    background: linear-gradient(to right, rgb(255, 55, 222),rgb(77, 0, 219));
-    height: 5px;
-    border: none;
-}
+body{                                                                                                                                                                                                                        
+        font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;                                                                                                                                 
+        background-color:#111;                                                                                                                                                                                               
+        color:white;                                                                                                                                                                                                         
+}                                                                                                                                                                                                                            
+a{                                                                                                                                                                                                                           
+        position:absolute;                                                                                                                                                                                                   
+        margin: 1%;                                                                                                                                                                                                          
+        padding: 1%;                                                                                                                                                                                                         
+        text-decoration:none;                                                                                                                                                                                                
+        color:#eee;                                                                                                                                                                                                          
+        font-size:300%;                                                                                                                                                                                                      
+        background-color: #333;                                                                                                                                                                                              
+        border : 3px black solid;                                                                                                                                                                                            
+}                                                                                                                                                                                                                            
+a:hover{                                                                                                                                                                                                                     
+        text-decoration:none;                                                                                                                                                                                                
+        background-color:#555;                                                                                                                                                                                               
+}                                                                                                                                                                                                                            
+#anon{                                                                                                                                                                                                                       
+        top:42%;                                                                                                                                                                                                             
+        left:10%;                                                                                                                                                                                                            
+}                                                                                                                                                                                                                            
+#login{                                                                                                                                                                                                                      
+        top:42%;                                                                                                                                                                                                             
+        left: 63%;                                                                                                                                                                                                           
+}                                                                                                                                                                                                                            
+#dms{                                                                                                                                                                                                                        
+        top:66%;                                                                                                                                                                                                             
+        left:44%;                                                                                                                                                                                                            
+}                                                                                                                                                                                                                            
+#Title{                                                                                                                                                                                                                      
+        position: absolute;                                                                                                                                                                                                  
+        left: 32.5%;                                                                                                                                                                                                         
+        top:20%;                                                                                                                                                                                                             
+        font-size:400%;                                                                                                                                                                                                      
+}                                                                                                                                                                                                                            
+#PinkBar{                                                                                                                                                                                                                    
+        padding: 4px;                                                                                                                                                                                                        
+        margin-top:30px;                                                                                                                                                                                                     
+        margin-bottom:30px%;                                                                                                                                                                                                 
+        background: linear-gradient(to left,#cf08bb,#6108cf);                                                                                                                                                                
+        border :none;                                                                                                                                                                                                        
+}                                                                                                                                                                                                                            
+#container{                                                                                                                                                                                                                  
+        margin-top:30px;                                                                                                                                                                                                     
+        background-color:#161616;                                                                                                                                                                                            
+        padding-bottom:600px;                                                                                                                                                                                                
+}  
