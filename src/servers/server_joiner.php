@@ -4,10 +4,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-
+$my_sql_pass="";
 if (!isset($_SESSION['UniversalID'])){header("Location: server_join.php?error=invalid_session");}
 if (isset($_GET['server_invite'])){
-if ($con = mysqli_connect("127.0.0.1","root","!StanChrisJack1two3","server_nfo")){
+if ($con = mysqli_connect("127.0.0.1","root",$my_sql_pass,"server_nfo")){
 if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_invite="' . $_GET['server_invite'] . '"')) {
         echo 'SELECT server_users FROM server_nfo WHERE server_invite="' . $_GET['server_invite'] . '"';
         $scary = mysqli_fetch_row(mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_invite="' . $_GET['server_invite'] . '"'));
@@ -23,7 +23,7 @@ if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE serv
         } else {echo "failed getting value";}
         }}}
 }else{
-if ($con = mysqli_connect("127.0.0.1","root","!StanChrisJack1two3","server_nfo")){
+if ($con = mysqli_connect("127.0.0.1","root",$my_sql_pass,"server_nfo")){
 if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_invite="' . $_POST['invcde'] . '"')) {
         echo 'SELECT server_users FROM server_nfo WHERE server_invite="' . $_POST['invcde'] . '"';
         $scary = mysqli_fetch_row(mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_invite="' . $_POST['invcde'] . '"'));
