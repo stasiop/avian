@@ -1,3 +1,4 @@
+<style>
 table, th, td {
   border: 1px solid black;
 }
@@ -15,7 +16,6 @@ if (mysqli_connect_errno()) {
 if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_invite="' . $_SESSION['server_selected'] . '"')) {
         if ($row = mysqli_fetch_row(mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE server_invite="' . $_SESSION['server_selected'] . '"'))){
                 if(strpos($row[0], ",")){
-
                 $result = explode(",", $row[0]);
                 foreach ($result as $value){
                         $value = str_replace( array( '[', ']'), "", $value);
@@ -28,11 +28,23 @@ if ($result = mysqli_query($con, 'SELECT server_users FROM server_nfo WHERE serv
                         $username = $value;
                         echo "<tr><th>" . $username . "</th></tr>";
                 }
+                }else{
+                        $con = mysqli_connect("127.0.0.1","root",$my_sql_pass,"login_system");
+                        $value = str_replace( array( '[', ']'), "", $row[0]);
+                        if ($resultq = mysqli_query($con, 'SELECT Username FROM users WHERE UniversalID=' . $value)) {
+                        if ($row = mysqli_fetch_row($resultq)){
+                        $value = $row[0];
+                        }
+                        }
+                        $username = $value;
+                        echo "<tr><th>" . $username . "</th></tr>";
+                }
         }
   }else{echo "pee";}
   // Free result set
-} else {echo "IS THIS PEE AND POO";}
+//} else {echo "IS THIS PEE AND POO";}
 //} else{echo "bad mysql";}
 
 ?>
 </table>
+
