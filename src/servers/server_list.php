@@ -2,10 +2,11 @@
 <tbody>
 <?php
 session_start();
+
 if(empty($_SESSION['UniversalID'])){}else{
 $my_sql_pass=""; // enter pass
 $con = mysqli_connect("127.0.0.1","root",$my_sql_pass,"server_nfo");
-$query = "SELECT server_id FROM server_nfo WHERE server_users LIKE '%[" .(int)$_SESSION['UniversalID'] . "]'";
+$query = "SELECT server_id FROM server_nfo WHERE server_users LIKE '%[" .(int)$_SESSION['UniversalID'] . "]%'";
 //echo $query;
 /*if ($result = mysqli_query($con, $query)) {
                 $i=0
